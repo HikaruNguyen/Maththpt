@@ -1,0 +1,9 @@
+127.0.0.1       backend.dev
+127.0.0.1       frontend.dev
+127.0.0.1       btlphp.dev
+127.0.0.1       maththpt.dev
+::1             ip6-localhost
+10.0.2.2		maththpt.dev
+10.0.2.2       backend.dev
+10.0.2.2       frontend.dev
+10.0.2.2       btlphp.dev

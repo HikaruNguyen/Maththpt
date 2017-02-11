@@ -1,0 +1,1 @@
+fraction numerator x left parenthesis 2 plus x right parenthesis over denominator left parenthesis x plus 1 right parenthesis squared end fraction

@@ -1,0 +1,38 @@
+﻿body {
+}
+
+.body_table {
+    font-size: 13px;
+}
+
+.box1 {
+    background: #cddc39;
+}
+
+.box2 {
+    background: #ff9800;
+}
+
+.box3 {
+    background: #4caf50;
+}
+
+.box4 {
+    background: #f44336;
+}
+
+#phantrang {
+    padding: 10px;
+    margin: 10px;
+}
+
+#phantrang ul {
+    list-style-type: none;
+}
+
+#phantrang li {
+    font-weight: bold;
+    float: left;
+    width: 15px;
+    text-decoration: none;
+}

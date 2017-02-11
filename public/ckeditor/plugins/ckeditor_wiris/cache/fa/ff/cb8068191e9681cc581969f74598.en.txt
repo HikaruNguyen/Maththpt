@@ -1,0 +1,1 @@
+open curly brackets table row cell x equals 1 end cell row cell y equals 2 end cell row cell z equals 3 end cell end table close

@@ -1,0 +1,1 @@
+stack m a x with left square bracket negative 2 comma negative 1 right square bracket below f left parenthesis x right parenthesis equals 4
