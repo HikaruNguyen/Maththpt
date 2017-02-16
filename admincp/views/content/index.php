@@ -250,7 +250,12 @@ ON tbl_content.testID = tbl_test.id";
             url += "?cateID=" + cateID;
         }
         if (testID != 0) {
-            url += "&testID=" + testID;
+            if (cateID == 0) {
+                url += "?testID=" + testID;
+            } else {
+                url += "&testID=" + testID;
+            }
+
         }
         window.location.href = url;
     }

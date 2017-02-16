@@ -1,0 +1,1 @@
+open parentheses fraction numerator negative 1 over denominator 2 end fraction semicolon plus infinity close parentheses

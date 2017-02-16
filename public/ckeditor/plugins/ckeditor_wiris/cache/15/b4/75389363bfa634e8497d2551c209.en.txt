@@ -1,0 +1,1 @@
+v equals fraction numerator tan x minus 2 over denominator tan x minus m end fraction
