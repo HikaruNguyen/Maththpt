@@ -150,7 +150,7 @@
 
 </div>
 <button type="button" onclick="setColor(checkAnswer(),2)">Check</button>
-<a href="javascript:setColor(1,2)">Check</a>
+<a href="javascript:resetColor()">Check</a>
 <script>
     function checkAnswer() {
         var radios = document.getElementsByName('answer');
@@ -178,6 +178,11 @@
                 document.getElementById('answer_' + _select).style.backgroundColor = '#e74c3c';
             document.getElementById('answer_' + _true).style.backgroundColor = '#2ecc71';
 
+        }
+    }
+	function resetColor() {
+        for (var i = 1; i <= 4; i++) {
+            document.getElementById('answer_' + i).style.backgroundColor = 'white';
         }
     }
 </script>

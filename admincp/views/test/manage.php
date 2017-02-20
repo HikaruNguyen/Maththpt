@@ -68,7 +68,7 @@ if (isset($_SESSION['token'])) {
                             <input id="txtName" name="txtName" class="form-control" value="<?php echo $nameContent ?>">
                         </div>
                         <div class="form-group">
-                            Tên bộ đề
+                            Tác giả
                             (*)
                             <input id="txtAuthor" name="txtAuthor" class="form-control"
                                    value="<?php echo $authorContain ?>">
