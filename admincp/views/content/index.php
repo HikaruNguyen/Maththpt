@@ -182,7 +182,7 @@ ON tbl_content.testID = tbl_test.id";
                             if (count($result) > 0) {
                                 $row_table = "";
                                 for ($i = 0; $i < count($result); $i++) {
-                                    $row_table = $row_table . "<tr><td > " . ($i + 1) . "</td> ";
+                                    $row_table = $row_table . "<tr><td > " . ($i + 1 + $page * $per_page) . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['question'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['answerA'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['answerB'] . "</td> ";

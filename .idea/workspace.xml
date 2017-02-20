@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a3949b-9f37-45da-82db-9d72ba8d9898" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/content/index.php" afterPath="$PROJECT_DIR$/admincp/views/content/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/test/index.php" afterPath="$PROJECT_DIR$/admincp/views/test/index.php" />
     </list>
     <ignored path="Maththpt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,27 +32,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+            <state relative-caret-position="221">
+              <caret line="184" column="104" selection-start-line="184" selection-start-column="104" selection-end-line="184" selection-end-column="104" />
               <folding>
-                <marker date="1487600967958" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
-                <marker date="1487600967958" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
-                <marker date="1487600967958" expanded="true" signature="9856:9998" placeholder="..." />
-                <marker date="1487600967958" expanded="true" signature="10817:10942" placeholder="..." />
-                <marker date="1487600967958" expanded="true" signature="10820:10937" placeholder="..." />
+                <marker date="1487601276151" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
+                <marker date="1487601276151" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
+                <marker date="1487601276151" expanded="true" signature="9876:10018" placeholder="..." />
+                <marker date="1487601276151" expanded="true" signature="10837:10962" placeholder="..." />
+                <marker date="1487601276151" expanded="true" signature="10840:10957" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -412,15 +402,15 @@
       <workItem from="1487169321413" duration="79000" />
       <workItem from="1487253262931" duration="1881000" />
       <workItem from="1487259085862" duration="3019000" />
-      <workItem from="1487599467449" duration="1629000" />
+      <workItem from="1487599467449" duration="1875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126506000" />
+    <option name="totallyTimeSpent" value="126752000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="0" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2503671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -819,14 +809,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+        <state relative-caret-position="221">
+          <caret line="184" column="104" selection-start-line="184" selection-start-column="104" selection-end-line="184" selection-end-column="104" />
           <folding>
-            <marker date="1487600967958" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
-            <marker date="1487600967958" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
-            <marker date="1487600967958" expanded="true" signature="9856:9998" placeholder="..." />
-            <marker date="1487600967958" expanded="true" signature="10817:10942" placeholder="..." />
-            <marker date="1487600967958" expanded="true" signature="10820:10937" placeholder="..." />
+            <marker date="1487601276151" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
+            <marker date="1487601276151" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
+            <marker date="1487601276151" expanded="true" signature="9876:10018" placeholder="..." />
+            <marker date="1487601276151" expanded="true" signature="10837:10962" placeholder="..." />
+            <marker date="1487601276151" expanded="true" signature="10840:10957" placeholder="..." />
           </folding>
         </state>
       </provider>
