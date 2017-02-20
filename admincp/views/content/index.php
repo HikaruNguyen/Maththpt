@@ -114,6 +114,7 @@ ON tbl_content.testID = tbl_test.id";
                                             $op = $op . "' ";
                                             if ($test == $dataTest[$i]['id']) {
                                                 $op = $op . "selected='selected'";
+
                                             }
                                             $op = $op . ">" . $dataTest[$i]['displayname'] . "</option>";
                                             echo $op;

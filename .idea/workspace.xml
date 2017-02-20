@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a3949b-9f37-45da-82db-9d72ba8d9898" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/test/manage.php" afterPath="$PROJECT_DIR$/admincp/views/test/manage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/content/index.php" afterPath="$PROJECT_DIR$/admincp/views/content/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/test/index.php" afterPath="$PROJECT_DIR$/admincp/views/test/index.php" />
     </list>
     <ignored path="Maththpt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +31,34 @@
     <favorites_list name="Maththpt" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+              <folding>
+                <marker date="1487600967958" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
+                <marker date="1487600967958" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
+                <marker date="1487600967958" expanded="true" signature="9856:9998" placeholder="..." />
+                <marker date="1487600967958" expanded="true" signature="10817:10942" placeholder="..." />
+                <marker date="1487600967958" expanded="true" signature="10820:10937" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -86,7 +112,6 @@
         <option value="$PROJECT_DIR$/admincp/views/includes/footer.php" />
         <option value="$PROJECT_DIR$/admincp/views/includes/header.php" />
         <option value="$PROJECT_DIR$/admincp/views/bode/manage.php" />
-        <option value="$PROJECT_DIR$/admincp/views/test/index.php" />
         <option value="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/manage.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/AjaxCK.php" />
@@ -95,10 +120,11 @@
         <option value="$PROJECT_DIR$/api/category/get-category.php" />
         <option value="$PROJECT_DIR$/api/test/get-test.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/admincp/views/content/index.php" />
         <option value="$PROJECT_DIR$/db/DB_ADAPTER.php" />
         <option value="$PROJECT_DIR$/api/content/get-content.php" />
         <option value="$PROJECT_DIR$/admincp/views/test/manage.php" />
+        <option value="$PROJECT_DIR$/admincp/views/test/index.php" />
+        <option value="$PROJECT_DIR$/admincp/views/content/index.php" />
       </list>
     </option>
   </component>
@@ -267,6 +293,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maththpt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maththpt" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admincp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="category" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -364,18 +412,18 @@
       <workItem from="1487169321413" duration="79000" />
       <workItem from="1487253262931" duration="1881000" />
       <workItem from="1487259085862" duration="3019000" />
-      <workItem from="1487599467449" duration="341000" />
+      <workItem from="1487599467449" duration="1629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125218000" />
+    <option name="totallyTimeSpent" value="126506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2503671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2503671" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -675,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="258" column="9" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/content/test-detail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -770,9 +811,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+          <folding>
+            <marker date="1487600967958" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
+            <marker date="1487600967958" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
+            <marker date="1487600967958" expanded="true" signature="9856:9998" placeholder="..." />
+            <marker date="1487600967958" expanded="true" signature="10817:10942" placeholder="..." />
+            <marker date="1487600967958" expanded="true" signature="10820:10937" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

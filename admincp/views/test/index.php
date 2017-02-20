@@ -66,7 +66,7 @@ if (isset($_SESSION['token'])) {
                                 $row_table = $row_table . "<td>" . $result[$i]['id'] . "</td>";
                                 $row_table = $row_table . "<td>" . $result[$i]['displayname'] . "</td>";
                                 $row_table = $row_table . "<td>" . $result[$i]['author'] . "</td>";
-                                $row_table = $row_table . "<td>" . "<a class='edit' href='manage.php?type=edit&id=" . $result[$i]['id'] . "'>Xem câu hỏi</a>" . "</td>";
+                                $row_table = $row_table . "<td>" . "<a class='edit' href='../content/index.php?testID=".$result[$i]['id']."'>Xem câu hỏi</a>" . "</td>";
                                 $row_table = $row_table . "<td>" . "<a class='edit' href='manage.php?type=edit&id=" . $result[$i]['id'] . "'>Sửa</a>" . "</td>";
                                 $row_table = $row_table . "<td>" . "<a class='delete' href='manage.php?type=delete&id=" . $result[$i]['id'] . "'>Xóa</a>" . "</td>";
                                 $row_table = $row_table . "</tr>";
@@ -81,6 +81,7 @@ if (isset($_SESSION['token'])) {
             <!-- END EXAMPLE TABLE PORTLET-->
         </div>
     </div>
+    <a href="" ></a>
     <?php
     include '../includes/footer.php';
 } else {
