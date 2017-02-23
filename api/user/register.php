@@ -70,8 +70,8 @@ if ($utils->checkHeader() == true) {
             } else {
                 $token = sha1($username + time());
                 $object = array("username" => $username, "password" => sha1($password), "token" => $token, "fullname" => $fullname, "email" => $email);
-                $result = $db->insert_to_database("user", $object);
-                if ($result == true) {
+                $insert = $db->insert_to_database("user", $object);
+                if ($insert == true) {
                     $response['success'] = true;
                     $response['status'] = '200';
                     $response['message'] = 'Đăng ký thành công';

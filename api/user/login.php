@@ -46,12 +46,14 @@ if ($utils->checkHeader() == true) {
             $token = sha1($username + time());
             $object = array("token" => $token);
             $condistion = array("id" => $result[0]['id']);
-            $result = $db->update("user", $object, $condistion);
-            if ($result == true) {
+            $update = $db->update("user", $object, $condistion);
+            if ($update == true) {
                 $response['success'] = true;
                 $response['status'] = '200';
                 $data['id'] = $result[0]['id'];
                 $data['username'] = $result[0]['username'];
+ 		$data['fullname'] = $result[0]['fullname'];
+		$data['email'] = $result[0]['email'];
                 $data['type'] = $result[0]['type'];
                 $data['token'] = $token;
                 $response['data'] = $data;
