@@ -1,0 +1,1 @@
+integral f left parenthesis x right parenthesis d x space equals space minus 1 half sin 2 x plus C

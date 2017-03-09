@@ -1,0 +1,1 @@
+integral subscript 0 superscript 4 f left parenthesis x right parenthesis d x

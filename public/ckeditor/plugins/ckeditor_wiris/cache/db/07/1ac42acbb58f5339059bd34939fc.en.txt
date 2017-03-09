@@ -1,0 +1,1 @@
+fraction numerator 1 over denominator 2 square root of x plus 1 end root left parenthesis 1 plus square root of x plus 1 end root right parenthesis end fraction
