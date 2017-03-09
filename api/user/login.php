@@ -52,8 +52,13 @@ if ($utils->checkHeader() == true) {
                 $response['status'] = '200';
                 $data['id'] = $result[0]['id'];
                 $data['username'] = $result[0]['username'];
+<<<<<<< HEAD
+ 		$data['fullname'] = $result[0]['fullname'];
+		$data['email'] = $result[0]['email'];
+=======
                 $data['fullname'] = $result[0]['fullname'];
                 $data['email'] = $result[0]['email'];
+>>>>>>> e4caf9505d09358c498239e6879f0291c571edb0
                 $data['type'] = $result[0]['type'];
                 $data['token'] = $token;
                 $response['data'] = $data;

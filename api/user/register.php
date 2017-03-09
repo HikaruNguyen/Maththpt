@@ -75,7 +75,11 @@ if ($utils->checkHeader() == true) {
                 echo json_encode($response, JSON_UNESCAPED_UNICODE);
             } else {
                 $token = sha1($username + time());
+<<<<<<< HEAD
+                $object = array("username" => $username, "password" => sha1($password), "token" => $token, "fullname" => $fullname, "email" => $email);
+=======
                 $object = array("username" => $username, "password" => sha1($password), "token" => $token, "fullname" => $fullname, "email" => $email,"type"=>2,"avatar"=>$avatar);
+>>>>>>> e4caf9505d09358c498239e6879f0291c571edb0
                 $insert = $db->insert_to_database("user", $object);
                 if ($insert == true) {
                     $response['success'] = true;
