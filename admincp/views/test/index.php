@@ -49,6 +49,8 @@ if (isset($_SESSION['token'])) {
                             </th>
                             <th>Xem câu hỏi
                             </th>
+                            <th>Kích hoạt
+                            </th>
                             <th>Sửa
                             </th>
                             <th>Xóa
@@ -67,6 +69,11 @@ if (isset($_SESSION['token'])) {
                                 $row_table = $row_table . "<td>" . $result[$i]['displayname'] . "</td>";
                                 $row_table = $row_table . "<td>" . $result[$i]['author'] . "</td>";
                                 $row_table = $row_table . "<td>" . "<a class='edit' href='../content/index.php?testID=".$result[$i]['id']."'>Xem câu hỏi</a>" . "</td>";
+                                if($result[$i]['activated']==1){
+                                    $row_table = $row_table . "<td>Hiển thị</td>";
+                                }else{
+                                    $row_table = $row_table . "<td>Ẩn</td>";
+                                }
                                 $row_table = $row_table . "<td>" . "<a class='edit' href='manage.php?type=edit&id=" . $result[$i]['id'] . "'>Sửa</a>" . "</td>";
                                 $row_table = $row_table . "<td>" . "<a class='delete' href='manage.php?type=delete&id=" . $result[$i]['id'] . "'>Xóa</a>" . "</td>";
                                 $row_table = $row_table . "</tr>";

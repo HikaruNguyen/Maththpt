@@ -31,6 +31,7 @@ if (isset($_SESSION['token'])) {
         if ($type == 'edit' || $type == 'delete') {
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
+                var_dump($id);
                 $con = array("id" => $id);
                 $data = $db->get_by_conditions("tbl_content", $con);
                 if (count($data) > 0) {
@@ -249,12 +250,12 @@ if (isset($_SESSION['token'])) {
                                 <?php
                                 $dataBoDe = $db->get_all_record("tbl_test");
                                 if (count($dataBoDe) > 0) {
-                                    for ($i = 0; $i < count($dataBoDe); $i++) {
+                                    for ($i = count($dataBoDe)-1; $i >= 0; $i--) {
 //                                        $op = "<option value='$dataCate[$i]['id']'";
                                         $op = "<option value='";
                                         $op = $op . $dataBoDe[$i]['id'];
                                         $op = $op . "' ";
-                                        if ($cateID == $dataBoDe[$i]['id']) {
+                                        if ($testID == $dataBoDe[$i]['id']) {
                                             $op = $op . "selected='selected'";
                                         }
                                         $op = $op . ">" . $dataBoDe[$i]['displayname'] . "</option>";

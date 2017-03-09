@@ -165,8 +165,6 @@ ON tbl_content.testID = tbl_test.id";
                                 </th>
                                 <th>ĐA 4
                                 </th>
-                                <th>ĐA Đúng
-                                </th>
                                 <th>Bộ đề
                                 </th>
                                 <th>Chuyên đề
@@ -183,12 +181,27 @@ ON tbl_content.testID = tbl_test.id";
                                 $row_table = "";
                                 for ($i = 0; $i < count($result); $i++) {
                                     $row_table = $row_table . "<tr><td > " . ($i + 1 + $page * $per_page) . "</td> ";
-                                    $row_table = $row_table . "<td> " . $result[$i]['question'] . "</td> ";
-                                    $row_table = $row_table . "<td> " . $result[$i]['answerA'] . "</td> ";
-                                    $row_table = $row_table . "<td> " . $result[$i]['answerB'] . "</td> ";
-                                    $row_table = $row_table . "<td>  " . $result[$i]['answerC'] . "</td> ";
-                                    $row_table = $row_table . "<td> " . $result[$i]['answerD'] . "</td> ";
-                                    $row_table = $row_table . "<td> " . $result[$i]['answerTrue'] . "</td> ";
+                                    $row_table = $row_table . "<td>" . $result[$i]['question'] . "</td> ";
+                                    if ((int)$result[$i]['answerTrue'] == 1) {
+                                        $row_table = $row_table . "<td><font color='red'> " . $result[$i]['answerA'] . "</font></td> ";
+                                    } else {
+                                        $row_table = $row_table . "<td> " . $result[$i]['answerA'] . "</td> ";
+                                    }
+                                    if ((int)$result[$i]['answerTrue'] == 2) {
+                                        $row_table = $row_table . "<td><font color='red'> " . $result[$i]['answerB'] . "</font></td> ";
+                                    } else {
+                                        $row_table = $row_table . "<td> " . $result[$i]['answerB'] . "</td> ";
+                                    }
+                                    if ((int)$result[$i]['answerTrue'] == 3) {
+                                        $row_table = $row_table . "<td><font color='red'> " . $result[$i]['answerC'] . "</font></td> ";
+                                    } else {
+                                        $row_table = $row_table . "<td> " . $result[$i]['answerC'] . "</td> ";
+                                    }
+                                    if ((int)$result[$i]['answerTrue'] == 4) {
+                                        $row_table = $row_table . "<td><font color='red'> " . $result[$i]['answerD'] . "</font></td> ";
+                                    } else {
+                                        $row_table = $row_table . "<td> " . $result[$i]['answerD'] . "</td> ";
+                                    }
                                     $row_table = $row_table . "<td> " . $result[$i]['test'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['chuyende'] . "</td> ";
                                     $row_table = $row_table . "<td> " . "<a class='edit' href = 'manage.php?type=edit&id=" . $result[$i]['id'] . "' > Sửa</a> " . "</td> ";

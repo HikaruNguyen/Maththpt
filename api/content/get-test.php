@@ -14,7 +14,7 @@ $response = array();
 const  per_page = 10;
 if ($utils->checkHeader() == true) {
     $db = new DB_ADAPTER();
-    $sql_get_count = "SELECT count(id) as SL from tbl_test";
+    $sql_get_count = "SELECT count(id) as SL from tbl_test where activated =1";
     $count_result = $db->get_data_use_query($sql_get_count);
     $total_record = (int)$count_result[0]['SL'];
     $total_page = $total_record / per_page;
@@ -28,7 +28,8 @@ if ($utils->checkHeader() == true) {
         }
     }
     $begin_record = $page * per_page;
-    $result = $db->get_all_record_paging('tbl_test', $begin_record, per_page);
+    $con = array("activated" => 1);
+    $result = $db->get_all_record_conditions_paging('tbl_test', $con,$begin_record, per_page);
 
     if (http_response_code() == 200) {
         $response['success'] = true;

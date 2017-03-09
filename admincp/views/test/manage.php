@@ -19,6 +19,7 @@ if (isset($_SESSION['token'])) {
         $idContent = "";
         $nameContent = "";
         $authorContain = "";
+        $activated = 1;
         if ($type == 'edit' || $type == 'delete') {
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
@@ -28,6 +29,7 @@ if (isset($_SESSION['token'])) {
                     $idContent = $data[0]['id'];
                     $nameContent = $data[0]['displayname'];
                     $authorContain = $data[0]['author'];
+                    $activated = (int)$data[0]['activated'];
                 }
             }
         }
@@ -50,10 +52,10 @@ if (isset($_SESSION['token'])) {
                 </div>
                 <div class="portlet-body form">
                     <div class="alert alert-danger" id="div_error" style="display: none">
-                <span>
-<!--                    <asp:Label ID="lblError" runat="server" Text="Đã xảy ra lỗi"></asp:Label>-->
+                        <span>
+        <!--                    <asp:Label ID="lblError" runat="server" Text="Đã xảy ra lỗi"></asp:Label>-->
 
-                </span>
+                        </span>
                     </div>
                     <div class="form-body">
                         <div class="form-group">
@@ -73,7 +75,27 @@ if (isset($_SESSION['token'])) {
                             <input id="txtAuthor" name="txtAuthor" class="form-control"
                                    value="<?php echo $authorContain ?>">
                         </div>
-
+                        <div class="form-group">
+                            Kích hoạt
+                            (*)
+                            <select class="form-control" name="activated" id="activated">
+                                <option value="1"
+                                    <?php
+                                    if ($activated == 1) {
+                                        echo " Selected='selected'";
+                                    }
+                                    ?>
+                                >Hiển thị
+                                </option>
+                                <option value="0"
+                                    <?php
+                                    if ($activated == 0) {
+                                        echo " Selected='selected'";
+                                    }
+                                    ?>>Ẩn
+                                </option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-actions right">
                         <button id="btnCancel" type="button" class="btn default">Hủy</button>
@@ -115,7 +137,7 @@ if (!empty($_POST)) {
                 && $_POST['txtAuthor'] != null && trim($_POST['txtAuthor'])
             ) {
                 $result = 0;
-                $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor']);
+                $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor'], $_POST['activated']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
                     header('location:../test');

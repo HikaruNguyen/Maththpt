@@ -44,11 +44,11 @@ class CRUDUtils
         return 0;
     }
 
-    public static function manageBoDe($type, $id, $displayname, $author)
+    public static function manageBoDe($type, $id, $displayname, $author, $activated)
     {
         $db = new DB_ADAPTER();
         if ($type == 'edit') {
-            $object = array("displayname" => $displayname, "author" => $author);
+            $object = array("displayname" => $displayname, "author" => $author, "activated" => $activated);
             $condistion = array("id" => $id);
             $result = $db->update(CRUDUtils::$DB_BODE, $object, $condistion);
             if ($result == true) {
@@ -57,7 +57,7 @@ class CRUDUtils
                 return 0;
             }
         } else if ($type == 'add') {
-            $object = array("displayname" => $displayname, "author" => $author);
+            $object = array("displayname" => $displayname, "author" => $author, "activated" => $activated);
             $result = $db->insert_to_database(CRUDUtils::$DB_BODE, $object);
             if ($result == true) {
                 return 1;
