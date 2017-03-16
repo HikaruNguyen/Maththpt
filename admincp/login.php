@@ -53,7 +53,7 @@ if (isset($_POST['txtUserName']) && isset($_POST['txtPassword'])) {
         $password = $_POST['txtPassword'];
         $db = new DB_ADAPTER();
         $con = array("username" => $username, "password" => sha1($password));
-        $result = $db->get_by_conditions('user', $con);
+        $result = $db->get_by_conditions('tbl_manager', $con);
         if (count($result) > 0) {
             $_SESSION['token'] = sha1($username + $password);
             $_SESSION['username'] = $username;

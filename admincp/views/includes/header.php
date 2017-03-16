@@ -147,34 +147,33 @@
                             <span class="title">Quản lý câu hỏi</span>
                         </a>
                     </li>
-                    <li id="Menu_KH">
-                        <a href="javascript:;">
+                    <li id="Menu_User">
+                        <a href="../user">
                             <i class="fa fa-group"></i>
                             <span class="title">Quản lý người dùng</span>
-
                         </a>
                     </li>
-                    <li id="Menu_ThongKe">
-                        <a href="javascript:;">
-                            <i class="icon-bar-chart"></i>
-                            <span class="title">Báo cáo thống kê</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li id="tk_doanhthu">
-                                <a href="frm_ThongKeDoanhThu.aspx">Thống kê doanh thu</a>
-                            </li>
-                            <li id="tk_nhapxuat">
-                                <a href="frm_ThongKeNhapXuat.aspx">Thống kê nhập xuất</a>
-                            </li>
-                            <li id="tk_khachhang">
-                                <a href="frm_ThongKeKhachHang.aspx">Thống kê khách hàng</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <!--                    <li id="Menu_ThongKe">-->
+                    <!--                        <a href="javascript:;">-->
+                    <!--                            <i class="icon-bar-chart"></i>-->
+                    <!--                            <span class="title">Báo cáo thống kê</span>-->
+                    <!--                            <span class="arrow "></span>-->
+                    <!--                        </a>-->
+                    <!--                        <ul class="sub-menu">-->
+                    <!--                            <li id="tk_doanhthu">-->
+                    <!--                                <a href="">Thống kê doanh thu</a>-->
+                    <!--                            </li>-->
+                    <!--                            <li id="tk_nhapxuat">-->
+                    <!--                                <a href="">Thống kê nhập xuất</a>-->
+                    <!--                            </li>-->
+                    <!--                            <li id="tk_khachhang">-->
+                    <!--                                <a href="">Thống kê khách hàng</a>-->
+                    <!--                            </li>-->
+                    <!--                        </ul>-->
+                    <!--                    </li>-->
 
-                    <li id="Menu_TaiKhoan">
-                        <a href="frm_QLTaiKhoan.aspx">
+                    <li id="Menu_Account">
+                        <a href="../manager">
                             <i class="icon-user"></i>
                             <span class="title">Quản lý tài khoản</span>
 

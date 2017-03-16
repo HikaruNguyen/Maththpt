@@ -236,10 +236,10 @@ ON tbl_content.testID = tbl_test.id";
                                 if ($page <= $total_page - 1) {
                                     $next_page = $page + 1;
                                     echo " <li class='paginate_button next' aria-controls='sample_2' tabindex='0' id='sample_2_next'><a
-                                    href='" . hrefFilter($next_page, $con) . "'><i class='fa fa-angle-right'></i></a></li><ul>";
+                                    href='" . hrefFilter($next_page, $con) . "'><i class='fa fa-angle-right'></i></a></li>";
                                 }
                                 ?>
-
+                            </ul>
                         </div>
                     <?php } ?>
                 </div>
