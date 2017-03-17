@@ -10,6 +10,7 @@ $per_page = 10;
 if (isset($_SESSION['token'])) {
     include '../../../db/configdb.php';
     require_once('../../../db/DB_ADAPTER.php');
+    require_once('../../utils/CRUDUtils.php');
     include '../includes/header.php';
     $db = new DB_ADAPTER();
     if (!isset($_GET['page'])) {
@@ -21,8 +22,8 @@ if (isset($_SESSION['token'])) {
             $page = 0;
         }
     }
-    $sql_get_count = "SELECT count(user.id) as SL from user";
-    $sql = "SELECT user.id, user.username, user.fullname, user.email, user.type FROM user";
+    $sql_get_count = "SELECT count(user.id) as SL from " . CRUDUtils::$DB_USER;
+    $sql = "SELECT user.id, user.username, user.fullname, user.email, user.type FROM " . CRUDUtils::$DB_USER;
 
     $count_result = $db->get_data_use_query($sql_get_count);
     $total_record = (int)$count_result[0]['SL'];
@@ -103,7 +104,7 @@ if (isset($_SESSION['token'])) {
                                 if ($page > 0) {
                                     $pre_page = $page - 1;
                                     echo "<li class='paginate_button previous' aria-controls=\"sample_2\" tabindex=\"0\"
-                                id='sample_2_previous'><a href='" . hrefFilter($per_page, $con) . "'><i class='fa fa-angle-left'></i></a></li>";
+                                id='sample_2_previous'><a href='" . hrefFilter($per_page) . "'><i class='fa fa-angle-left'></i></a></li>";
                                 }
 
                                 for ($i = 0; $i < $total_page; $i++) {
@@ -111,14 +112,14 @@ if (isset($_SESSION['token'])) {
                                     if ($i == $page) {
                                         $li = $li . "active";
                                     }
-                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i, $con) . "'>{$i}</a></li>";
+                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i) . "'>{$i}</a></li>";
                                     echo $li;
                                 }
 
                                 if ($page <= $total_page - 1) {
                                     $next_page = $page + 1;
                                     echo " <li class='paginate_button next' aria-controls='sample_2' tabindex='0' id='sample_2_next'><a
-                                    href='" . hrefFilter($next_page, $con) . "'><i class='fa fa-angle-right'></i></a></li>";
+                                    href='" . hrefFilter($next_page) . "'><i class='fa fa-angle-right'></i></a></li>";
                                 }
                                 ?>
                             </ul>
@@ -138,3 +139,11 @@ if (isset($_SESSION['token'])) {
 <script>
     document.getElementById("Menu_User").className = "active open";
 </script>
+<?php
+function hrefFilter($page)
+{
+    $link = "index.php?page={$page}";
+    return $link;
+}
+
+?>

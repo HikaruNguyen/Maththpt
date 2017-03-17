@@ -24,7 +24,7 @@ if (isset($_SESSION['token'])) {
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
                 $con = array("id" => $id);
-                $data = $db->get_by_conditions("user", $con);
+                $data = $db->get_by_conditions(CRUDUtils::$DB_MANAGER, $con);
                 if (count($data) > 0) {
                     $idUser = $data[0]['id'];
                     $userName = $data[0]['username'];
@@ -42,11 +42,11 @@ if (isset($_SESSION['token'])) {
                         <i class="fa fa-bookmark"></i>
                         <?php
                         if ($type == "add") {
-                            echo "Thêm người dùng";
+                            echo "Thêm quản trị viên";
                         } else if ($type == "edit") {
-                            echo "Sửa người dùng";
+                            echo "Sửa quản trị viêng";
                         } else if ($type == "delete") {
-                            echo "Xóa người dùng";
+                            echo "Xóa quản trị viên";
                         }
                         ?>
                     </div>
@@ -60,7 +60,7 @@ if (isset($_SESSION['token'])) {
                     </div>
                     <div class="form-body">
                         <div class="form-group">
-                            Mã người dùng
+                            Mã quản trị viên
                             (*)
                             <input id="txtID" name="txtID" class="form-control" readonly
                                    value="<?php echo $idUser ?>">
@@ -72,7 +72,7 @@ if (isset($_SESSION['token'])) {
                                    value="<?php echo $userName ?>">
                         </div>
                         <div class="form-group">
-                            Tên đẩy đủ
+                            Tên đầy đủ
                             (*)
                             <input id="txtFullName" name="txtFullName" class="form-control"
                                    value="<?php echo $fullName ?>">
@@ -81,27 +81,6 @@ if (isset($_SESSION['token'])) {
                             Email người dùng
                             (*)
                             <input id="txtEmail" name="txtEmail" class="form-control" value="<?php echo $email ?>">
-                        </div>
-                        <div class="form-group">
-                            Loại người dùng
-                            (*)
-                            <select class="form-control" name="typeUser" id="typeUser">
-                                <option value="1"
-                                    <?php
-                                    if ($typeUser == 1) {
-                                        echo " Selected='selected'";
-                                    }
-                                    ?>>Đăng nhập qua Facebook
-                                </option>
-                                <option value="2"
-                                    <?php
-                                    if ($typeUser == 2) {
-                                        echo " Selected='selected'";
-                                    }
-                                    ?>
-                                >Bình thường
-                                </option>
-                            </select>
                         </div>
                     </div>
                     <div class="form-actions right">
@@ -131,7 +110,7 @@ if (isset($_SESSION['token'])) {
 }
 ?>
     <script>
-        document.getElementById("Menu_User").className = "active open";
+        document.getElementById("Menu_Manager").className = "active open";
     </script>
 <?php
 if (!empty($_POST)) {
@@ -139,17 +118,19 @@ if (!empty($_POST)) {
 
     if ($type != null && trim($type) != "") {
         if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtUserName'])
-            && isset($_POST['txtFullName'])&& isset($_POST['txtEmail'])&& isset($_POST['typeUser'])) {
+            && isset($_POST['txtFullName']) && isset($_POST['txtEmail'])
+        ) {
 
             if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtUserName'] != null && trim($_POST['txtUserName']) != ""
                 && $_POST['txtFullName'] != null && trim($_POST['txtFullName']) != ""
                 && $_POST['txtEmail'] != null && trim($_POST['txtEmail']) != ""
-                && $_POST['typeUser'] != null && trim($_POST['typeUser']) != "") {
+
+            ) {
                 $result = 0;
-                $result = CRUDUtils::manageUser($type, $_POST['txtID'], $_POST['txtUserName'],$_POST['txtFullName'],$_POST['txtEmail'],$_POST['typeUser']);
+                $result = CRUDUtils::manageManager($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
-                    header('location:../user');
+                    header('location:../manager');
                 }
             }
         }

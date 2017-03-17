@@ -172,10 +172,10 @@
                     <!--                        </ul>-->
                     <!--                    </li>-->
 
-                    <li id="Menu_Account">
+                    <li id="Menu_Manager">
                         <a href="../manager">
                             <i class="icon-user"></i>
-                            <span class="title">Quản lý tài khoản</span>
+                            <span class="title">Quản lý quản trị viên</span>
 
                         </a>
                     </li>

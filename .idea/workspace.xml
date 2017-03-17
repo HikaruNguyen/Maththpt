@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a3949b-9f37-45da-82db-9d72ba8d9898" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admincp/views/manager/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admincp/views/user/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admincp/views/user/manage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admincp/views/manager/manage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/login.php" afterPath="$PROJECT_DIR$/admincp/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" afterPath="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/content/index.php" afterPath="$PROJECT_DIR$/admincp/views/content/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/includes/header.php" afterPath="$PROJECT_DIR$/admincp/views/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/manager/index.php" afterPath="$PROJECT_DIR$/admincp/views/manager/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/user/index.php" afterPath="$PROJECT_DIR$/admincp/views/user/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/user/manage.php" afterPath="$PROJECT_DIR$/admincp/views/user/manage.php" />
     </list>
     <ignored path="Maththpt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,18 +37,7 @@
     <favorites_list name="Maththpt" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CRUDUtils.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admincp/utils/CRUDUtils.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="126" column="118" selection-start-line="126" selection-start-column="118" selection-end-line="126" selection-end-column="118" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,8 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
         <option value="$PROJECT_DIR$/includes/category.php" />
         <option value="$PROJECT_DIR$/admincp/main.php" />
         <option value="$PROJECT_DIR$/admincp/index.php" />
@@ -109,12 +96,14 @@
         <option value="$PROJECT_DIR$/admincp/views/test/manage.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/manage.php" />
         <option value="$PROJECT_DIR$/api/content/get-test.php" />
-        <option value="$PROJECT_DIR$/admincp/login.php" />
-        <option value="$PROJECT_DIR$/admincp/views/includes/header.php" />
-        <option value="$PROJECT_DIR$/admincp/views/user/index.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/index.php" />
+        <option value="$PROJECT_DIR$/admincp/views/includes/header.php" />
         <option value="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" />
         <option value="$PROJECT_DIR$/admincp/views/user/manage.php" />
+        <option value="$PROJECT_DIR$/admincp/views/manager/manage.php" />
+        <option value="$PROJECT_DIR$/admincp/login.php" />
+        <option value="$PROJECT_DIR$/admincp/views/user/index.php" />
+        <option value="$PROJECT_DIR$/admincp/views/manager/index.php" />
       </list>
     </option>
   </component>
@@ -130,7 +119,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -158,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -314,6 +302,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -380,6 +372,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,18 +384,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\Maththpt\public" />
-      <recent name="D:\xampp\htdocs\Maththpt\admincp\views" />
-      <recent name="D:\xampp\htdocs\Maththpt" />
-      <recent name="D:\xampp\htdocs\Maththpt\css" />
-      <recent name="D:\xampp\htdocs\Maththpt\ckeditor\plugins" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\Maththpt\api\content" />
       <recent name="D:\xampp\htdocs\Maththpt\db" />
       <recent name="D:\xampp\htdocs\Maththpt\public" />
       <recent name="D:\xampp\htdocs\Maththpt\admincp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\Maththpt\admincp\views\manager" />
+      <recent name="D:\xampp\htdocs\Maththpt\public" />
+      <recent name="D:\xampp\htdocs\Maththpt\admincp\views" />
+      <recent name="D:\xampp\htdocs\Maththpt" />
+      <recent name="D:\xampp\htdocs\Maththpt\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -475,17 +468,18 @@
       <workItem from="1489062463893" duration="5017000" />
       <workItem from="1489584458053" duration="5484000" />
       <workItem from="1489671009304" duration="815000" />
+      <workItem from="1489759007395" duration="4637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145869000" />
+    <option name="totallyTimeSpent" value="150506000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24670571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -522,13 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5360">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/ckeditor/ckeditor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -600,24 +587,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/global/css/components.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="5708" column="1" selection-start-line="5708" selection-start-column="1" selection-end-line="5708" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -639,13 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -800,52 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/manager/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="175" column="43" selection-start-line="175" selection-start-column="43" selection-end-line="175" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/category/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="241" column="33" selection-start-line="241" selection-start-column="33" selection-end-line="241" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="120" column="122" selection-start-line="120" selection-start-column="122" selection-end-line="120" selection-end-column="122" />
         </state>
       </provider>
     </entry>
@@ -858,29 +782,135 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/category/manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="235">
           <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/test/manage.php">
+    <entry file="file://$PROJECT_DIR$/admincp/views/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-777">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/user/manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1212">
-          <caret line="146" column="70" selection-start-line="146" selection-start-column="70" selection-end-line="146" selection-end-column="70" />
+        <state relative-caret-position="464">
+          <caret line="174" column="40" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admincp/utils/CRUDUtils.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="126" column="118" selection-start-line="126" selection-start-column="118" selection-end-line="126" selection-end-column="118" />
+        <state relative-caret-position="36">
+          <caret line="146" column="40" selection-start-line="146" selection-start-column="27" selection-end-line="146" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/user/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="293" selection-end-column="2" />
+          <folding>
+            <marker date="1489588151591" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
+            <marker date="1489588151591" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
+            <marker date="1489588151591" expanded="true" signature="10890:11032" placeholder="..." />
+            <marker date="1489588151591" expanded="true" signature="11851:11976" placeholder="..." />
+            <marker date="1489588151591" expanded="true" signature="11854:11971" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/manager/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="974">
+          <caret line="140" column="2" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <marker date="1489763419831" expanded="true" signature="570:602" placeholder="SELECT count... " />
+            <marker date="1489763419831" expanded="true" signature="570:603" placeholder="SELECT count... ${CRUDUtils::$DB_USER}" />
+            <marker date="1489763419831" expanded="true" signature="640:712" placeholder="SELECT user.... " />
+            <marker date="1489763419831" expanded="true" signature="640:713" placeholder="SELECT user.... ${CRUDUtils::$DB_USER}" />
+            <marker date="1489763419831" expanded="true" signature="4826:4962" placeholder="..." />
+            <marker date="1489763419831" expanded="true" signature="5775:5894" placeholder="..." />
+            <marker date="1489763419831" expanded="true" signature="5778:5889" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/test/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/manager/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <marker date="1489763728679" expanded="true" signature="570:609" placeholder="SELECT count... " />
+            <marker date="1489763728679" expanded="true" signature="570:610" placeholder="SELECT count... ${CRUDUtils}" />
+            <marker date="1489763728679" expanded="true" signature="570:666" placeholder="SELECT count... tbl_manager" />
+            <marker date="1489763728679" expanded="true" signature="681:832" placeholder="SELECT user.... user" />
+            <marker date="1489763728679" expanded="true" signature="681:858" placeholder="SELECT tbl_m... tbl_manager" />
+            <marker date="1489763728679" expanded="true" signature="4945:5081" placeholder="..." />
+            <marker date="1489763728679" expanded="true" signature="5894:6013" placeholder="..." />
+            <marker date="1489763728679" expanded="true" signature="5897:6008" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
           <folding />
         </state>
       </provider>
