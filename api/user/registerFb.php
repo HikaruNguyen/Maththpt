@@ -73,7 +73,6 @@ if ($utils->checkHeader() == true) {
             $time = time();
             $object = array(
                 "username" => $fullname,
-                "password" => sha1($password),
                 "token" => $token,
                 "fullname" => $fullname,
                 "email" => $email,
