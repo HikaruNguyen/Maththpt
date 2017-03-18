@@ -4,7 +4,6 @@
     <list default="true" id="47a3949b-9f37-45da-82db-9d72ba8d9898" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/content/exam.php" afterPath="$PROJECT_DIR$/api/content/exam.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/content/get-content.php" afterPath="$PROJECT_DIR$/api/content/get-content.php" />
     </list>
     <ignored path="Maththpt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,15 +31,31 @@
     <favorites_list name="Maththpt" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="get-content.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/content/get-content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+              <folding>
+                <marker date="1489828193964" expanded="true" signature="1219:1246" placeholder="SELECT count... " />
+                <marker date="1489828193964" expanded="true" signature="1219:1288" placeholder="SELECT count... tbl_content" />
+                <marker date="1489828193964" expanded="true" signature="1435:1496" placeholder="select count... ${Utils::DB_CATEGORY}" />
+                <marker date="1489828193964" expanded="true" signature="2065:2135" placeholder="SELECT count... tbl_content" />
+                <marker date="1489828193964" expanded="true" signature="2282:2339" placeholder="select count... ${Utils::DB_CATEGORY}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="exam.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/content/exam.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="50" column="113" selection-start-line="50" selection-start-column="113" selection-end-line="50" selection-end-column="113" />
+            <state relative-caret-position="568">
+              <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
               <folding>
-                <marker date="1489828783109" expanded="true" signature="619:644" placeholder="SELECT * FRO... tbl_content" />
-                <marker date="1489828783109" expanded="true" signature="1459:1518" placeholder="select count... ${Utils::DB_CATEGORY}" />
+                <marker date="1489844117047" expanded="true" signature="619:644" placeholder="SELECT * FRO... tbl_content" />
+                <marker date="1489844117047" expanded="true" signature="1414:1473" placeholder="select count... ${Utils::DB_CATEGORY}" />
               </folding>
             </state>
           </provider>
@@ -156,7 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,6 +260,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -342,22 +357,22 @@
       <workItem from="1489584458053" duration="5484000" />
       <workItem from="1489671009304" duration="815000" />
       <workItem from="1489759007395" duration="4953000" />
-      <workItem from="1489807625544" duration="9898000" />
+      <workItem from="1489807625544" duration="10463000" />
+      <workItem from="1489843641831" duration="474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160720000" />
+    <option name="totallyTimeSpent" value="161759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -368,6 +383,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -548,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -563,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="974">
           <caret line="140" column="2" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -579,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="955">
           <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -594,16 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <marker date="1489763728679" expanded="true" signature="570:609" placeholder="SELECT count... " />
-            <marker date="1489763728679" expanded="true" signature="570:610" placeholder="SELECT count... ${CRUDUtils}" />
-            <marker date="1489763728679" expanded="true" signature="570:666" placeholder="SELECT count... tbl_manager" />
-            <marker date="1489763728679" expanded="true" signature="681:832" placeholder="SELECT user.... user" />
-            <marker date="1489763728679" expanded="true" signature="681:858" placeholder="SELECT tbl_m... tbl_manager" />
-            <marker date="1489763728679" expanded="true" signature="4945:5081" placeholder="..." />
-            <marker date="1489763728679" expanded="true" signature="5894:6013" placeholder="..." />
-            <marker date="1489763728679" expanded="true" signature="5897:6008" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,15 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
-          <folding>
-            <marker date="1489763419831" expanded="true" signature="570:602" placeholder="SELECT count... " />
-            <marker date="1489763419831" expanded="true" signature="570:603" placeholder="SELECT count... ${CRUDUtils::$DB_USER}" />
-            <marker date="1489763419831" expanded="true" signature="640:712" placeholder="SELECT user.... " />
-            <marker date="1489763419831" expanded="true" signature="640:713" placeholder="SELECT user.... ${CRUDUtils::$DB_USER}" />
-            <marker date="1489763419831" expanded="true" signature="4826:4962" placeholder="..." />
-            <marker date="1489763419831" expanded="true" signature="5775:5894" placeholder="..." />
-            <marker date="1489763419831" expanded="true" signature="5778:5889" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -634,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="83" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="12" column="46" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,13 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
           <caret line="52" column="56" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="56" />
-          <folding>
-            <marker date="1489588151591" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
-            <marker date="1489588151591" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
-            <marker date="1489588151591" expanded="true" signature="10890:11032" placeholder="..." />
-            <marker date="1489588151591" expanded="true" signature="11851:11976" placeholder="..." />
-            <marker date="1489588151591" expanded="true" signature="11854:11971" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-616">
           <caret line="123" column="40" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" selection-start-line="10" selection-start-column="3" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,18 +669,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/Utils/StatusCode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Utils/StatusCode.php" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/date.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -712,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,11 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
           <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
-          <folding>
-            <marker date="1489809225965" expanded="true" signature="385:413" placeholder="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
-            <marker date="1489809225965" expanded="true" signature="486:514" placeholder="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
-            <marker date="1489809225965" expanded="true" signature="586:614" placeholder="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -740,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,15 +753,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
           <caret line="12" column="9" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <marker date="1489828160551" expanded="true" signature="352:407" placeholder="SELECT count... tbl_test" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/content/get-content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="782">
           <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
           <folding>
             <marker date="1489828193964" expanded="true" signature="1219:1246" placeholder="SELECT count... " />
@@ -812,11 +772,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/content/exam.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="113" selection-start-line="50" selection-start-column="113" selection-end-line="50" selection-end-column="113" />
+        <state relative-caret-position="568">
+          <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
           <folding>
-            <marker date="1489828783109" expanded="true" signature="619:644" placeholder="SELECT * FRO... tbl_content" />
-            <marker date="1489828783109" expanded="true" signature="1459:1518" placeholder="select count... ${Utils::DB_CATEGORY}" />
+            <marker date="1489844117047" expanded="true" signature="619:644" placeholder="SELECT * FRO... tbl_content" />
+            <marker date="1489844117047" expanded="true" signature="1414:1473" placeholder="select count... ${Utils::DB_CATEGORY}" />
           </folding>
         </state>
       </provider>

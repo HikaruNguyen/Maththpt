@@ -43,13 +43,11 @@ if ($utils->checkHeader() == true) {
         $response['data'] = $result;
         echo json_encode($response, JSON_UNESCAPED_UNICODE);
         //update exam
-        if (count($arrCateID) > 1) {
-            for ($i = 1; $i < count($arrCateID); $i++) {
-                $result_countExam = $db->get_data_use_query("select countExam FROM " . Utils::DB_CATEGORY . " WHERE id= " . $arrCateID[$i]);
-                $count_result = (int)$result_countReview[0]["countExam"];
-                $count_result++;
-                $db->update(Utils::DB_CATEGORY, array("countExam" => $count_result), array("id" => $arrCateID[$i]));
-            }
+        for ($i = 0; $i < count($arrCateID); $i++) {
+            $result_countExam = $db->get_data_use_query("select countExam FROM " . Utils::DB_CATEGORY . " WHERE id= " . $arrCateID[$i]);
+            $count_result = (int)$result_countExam[0]["countExam"];
+            $count_result++;
+            $db->update(Utils::DB_CATEGORY, array("countExam" => $count_result), array("id" => $arrCateID[$i]));
         }
 
     } else {
