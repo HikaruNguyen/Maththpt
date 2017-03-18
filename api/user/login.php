@@ -36,31 +36,30 @@ if ($utils->checkHeader() == true) {
     } else {
         $db = new DB_ADAPTER();
         $con = array("username" => $username, "password" => sha1($password));
-        $result = $db->get_by_conditions('user', $con);
+        $result = $db->get_by_conditions(Utils::DB_USER, $con);
         if (count($result) == 0 || $result[0]['type'] == 1) {
             $response['success'] = false;
             $response['status'] = '401';
             $response['message'] = "Tên đăng nhập hoặc mật khẩu không đúng, vui lòng kiểm tra lại";
             echo json_encode($response, JSON_UNESCAPED_UNICODE);
         } else {
+            //update token
             $token = sha1($username + time());
-            $object = array("token" => $token);
+            $object = array("token" => $token, "update_at" => time());
             $condistion = array("id" => $result[0]['id']);
-            $update = $db->update("user", $object, $condistion);
+            $update = $db->update(Utils::DB_USER, $object, $condistion);
             if ($update == true) {
                 $response['success'] = true;
                 $response['status'] = '200';
                 $data['id'] = $result[0]['id'];
                 $data['username'] = $result[0]['username'];
-<<<<<<< HEAD
- 		$data['fullname'] = $result[0]['fullname'];
-		$data['email'] = $result[0]['email'];
-=======
                 $data['fullname'] = $result[0]['fullname'];
                 $data['email'] = $result[0]['email'];
->>>>>>> e4caf9505d09358c498239e6879f0291c571edb0
                 $data['type'] = $result[0]['type'];
-                $data['token'] = $token;
+                $data['fbId'] = $result[0]['fbId'];
+                $data['token'] = $result[0]['token'];
+                $data['creat_at'] = $result[0]['creat_at'];
+                $data['update_at'] = $result[0]['update_at'];
                 $response['data'] = $data;
                 echo json_encode($response, JSON_UNESCAPED_UNICODE);
             } else {

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a3949b-9f37-45da-82db-9d72ba8d9898" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admincp/views/manager/manage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/user/registerFb.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/login.php" afterPath="$PROJECT_DIR$/admincp/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" afterPath="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/home/index.php" afterPath="$PROJECT_DIR$/admincp/views/home/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/includes/header.php" afterPath="$PROJECT_DIR$/admincp/views/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/manager/index.php" afterPath="$PROJECT_DIR$/admincp/views/manager/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/user/index.php" afterPath="$PROJECT_DIR$/admincp/views/user/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/user/manage.php" afterPath="$PROJECT_DIR$/admincp/views/user/manage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Utils/Utils.php" afterPath="$PROJECT_DIR$/api/Utils/Utils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/user/login.php" afterPath="$PROJECT_DIR$/api/user/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/user/register.php" afterPath="$PROJECT_DIR$/api/user/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/DB_ADAPTER.php" afterPath="$PROJECT_DIR$/db/DB_ADAPTER.php" />
     </list>
     <ignored path="Maththpt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +37,52 @@
     <favorites_list name="Maththpt" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="registerFb.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/registerFb.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="597">
+              <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+              <folding>
+                <marker date="1489809225965" expanded="true" signature="385:413" placeholder="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1489809225965" expanded="true" signature="486:514" placeholder="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1489809225965" expanded="true" signature="586:614" placeholder="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admincp/views/includes/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/user/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,13 +98,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/category.php" />
-        <option value="$PROJECT_DIR$/admincp/main.php" />
         <option value="$PROJECT_DIR$/admincp/index.php" />
         <option value="$PROJECT_DIR$/admincp/includes/footer.php" />
         <option value="$PROJECT_DIR$/admincp/Logout.php" />
         <option value="$PROJECT_DIR$/admincp/includes/header.php" />
-        <option value="$PROJECT_DIR$/admincp/views/home/index.php" />
         <option value="$PROJECT_DIR$/admincp/views/category/read.php" />
         <option value="$PROJECT_DIR$/admincp/views/category/creat.php" />
         <option value="$PROJECT_DIR$/admincp/views/category/edit.php" />
@@ -82,14 +124,10 @@
         <option value="$PROJECT_DIR$/admincp/views/bode/manage.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/AjaxCK.php" />
         <option value="$PROJECT_DIR$/public/ckeditor/plugins/ckeditor_wiris/integration/lib/php/Lib.class.php" />
-        <option value="$PROJECT_DIR$/api/Utils/Utils.php" />
         <option value="$PROJECT_DIR$/api/category/get-category.php" />
         <option value="$PROJECT_DIR$/api/test/get-test.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/api/content/get-content.php" />
-        <option value="$PROJECT_DIR$/db/DB_ADAPTER.php" />
-        <option value="$PROJECT_DIR$/api/user/register.php" />
-        <option value="$PROJECT_DIR$/api/user/login.php" />
         <option value="$PROJECT_DIR$/api/user/exam.php" />
         <option value="$PROJECT_DIR$/api/content/exam.php" />
         <option value="$PROJECT_DIR$/admincp/views/test/index.php" />
@@ -97,13 +135,20 @@
         <option value="$PROJECT_DIR$/admincp/views/content/manage.php" />
         <option value="$PROJECT_DIR$/api/content/get-test.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/index.php" />
-        <option value="$PROJECT_DIR$/admincp/views/includes/header.php" />
         <option value="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" />
         <option value="$PROJECT_DIR$/admincp/views/user/manage.php" />
         <option value="$PROJECT_DIR$/admincp/views/manager/manage.php" />
         <option value="$PROJECT_DIR$/admincp/login.php" />
         <option value="$PROJECT_DIR$/admincp/views/user/index.php" />
         <option value="$PROJECT_DIR$/admincp/views/manager/index.php" />
+        <option value="$PROJECT_DIR$/db/DB_ADAPTER.php" />
+        <option value="$PROJECT_DIR$/admincp/views/includes/header.php" />
+        <option value="$PROJECT_DIR$/admincp/views/home/index.php" />
+        <option value="$PROJECT_DIR$/api/Utils/StatusCode.php" />
+        <option value="$PROJECT_DIR$/api/Utils/Utils.php" />
+        <option value="$PROJECT_DIR$/api/user/register.php" />
+        <option value="$PROJECT_DIR$/api/user/login.php" />
+        <option value="$PROJECT_DIR$/api/user/registerFb.php" />
       </list>
     </option>
   </component>
@@ -147,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,196 +229,9 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,18 +243,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\Maththpt\api\user" />
+      <recent name="D:\xampp\htdocs\Maththpt\admincp\views\manager" />
+      <recent name="D:\xampp\htdocs\Maththpt\public" />
+      <recent name="D:\xampp\htdocs\Maththpt\admincp\views" />
+      <recent name="D:\xampp\htdocs\Maththpt" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\Maththpt\api\content" />
       <recent name="D:\xampp\htdocs\Maththpt\db" />
       <recent name="D:\xampp\htdocs\Maththpt\public" />
       <recent name="D:\xampp\htdocs\Maththpt\admincp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\Maththpt\admincp\views\manager" />
-      <recent name="D:\xampp\htdocs\Maththpt\public" />
-      <recent name="D:\xampp\htdocs\Maththpt\admincp\views" />
-      <recent name="D:\xampp\htdocs\Maththpt" />
-      <recent name="D:\xampp\htdocs\Maththpt\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -468,21 +327,23 @@
       <workItem from="1489062463893" duration="5017000" />
       <workItem from="1489584458053" duration="5484000" />
       <workItem from="1489671009304" duration="815000" />
-      <workItem from="1489759007395" duration="4637000" />
+      <workItem from="1489759007395" duration="4953000" />
+      <workItem from="1489807625544" duration="5408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150506000" />
+    <option name="totallyTimeSpent" value="156230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24670571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -493,7 +354,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -516,21 +376,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/ckeditor/ckeditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/utils/.php" />
-    <entry file="file://$PROJECT_DIR$/mathml.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="620" column="12" selection-start-line="620" selection-start-column="12" selection-end-line="620" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap-fileinput-master/js/locales/ar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-765">
@@ -563,20 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="4708" column="0" selection-start-line="4708" selection-start-column="0" selection-end-line="4708" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/includes/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -678,20 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/user/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/content/get-content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -699,24 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/Utils/Utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/creatdb.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="15" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/configdb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -748,31 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/DB_ADAPTER.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="184" column="13" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
-          <folding>
-            <marker date="1487603972805" expanded="true" signature="2526:2596" placeholder="INSERT INTO ${$tb_name}... " />
-            <marker date="1487603972805" expanded="true" signature="3260:3296" placeholder="DELETE FROM " />
-            <marker date="1487603972805" expanded="true" signature="4425:4463" placeholder="SELECT * FRO... ${$tbl_name}" />
-            <marker date="1487603972805" expanded="true" signature="5020:5055" placeholder="SELECT * FRO... ${$table}" />
-            <marker date="1487603972805" expanded="true" signature="5708:5722" placeholder="SELECT * FRO... ${$table}" />
-            <marker date="1487603972805" expanded="true" signature="6414:6428" placeholder="SELECT * FRO... ${$table}" />
-            <marker date="1487603972805" expanded="true" signature="7562:7600" placeholder="SELECT * FRO... ${$tbl_name}" />
-            <marker date="1487603972805" expanded="true" signature="8220:8255" placeholder="SELECT * FRO... ${$table}" />
-            <marker date="1487603972805" expanded="true" signature="8954:8968" placeholder="SELECT * FRO... ${$tbl_name}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/category/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/content/manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1661">
@@ -788,35 +566,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="174" column="40" selection-start-line="174" selection-start-column="28" selection-end-line="174" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/utils/CRUDUtils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="146" column="40" selection-start-line="146" selection-start-column="27" selection-end-line="146" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admincp/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,49 +581,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/user/manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="293" selection-end-column="2" />
-          <folding>
-            <marker date="1489588151591" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
-            <marker date="1489588151591" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
-            <marker date="1489588151591" expanded="true" signature="10890:11032" placeholder="..." />
-            <marker date="1489588151591" expanded="true" signature="11851:11976" placeholder="..." />
-            <marker date="1489588151591" expanded="true" signature="11854:11971" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/manager/manage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="974">
           <caret line="140" column="2" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <marker date="1489763419831" expanded="true" signature="570:602" placeholder="SELECT count... " />
-            <marker date="1489763419831" expanded="true" signature="570:603" placeholder="SELECT count... ${CRUDUtils::$DB_USER}" />
-            <marker date="1489763419831" expanded="true" signature="640:712" placeholder="SELECT user.... " />
-            <marker date="1489763419831" expanded="true" signature="640:713" placeholder="SELECT user.... ${CRUDUtils::$DB_USER}" />
-            <marker date="1489763419831" expanded="true" signature="4826:4962" placeholder="..." />
-            <marker date="1489763419831" expanded="true" signature="5775:5894" placeholder="..." />
-            <marker date="1489763419831" expanded="true" signature="5778:5889" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,6 +625,169 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="120" column="31" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          <folding>
+            <marker date="1489763419831" expanded="true" signature="570:602" placeholder="SELECT count... " />
+            <marker date="1489763419831" expanded="true" signature="570:603" placeholder="SELECT count... ${CRUDUtils::$DB_USER}" />
+            <marker date="1489763419831" expanded="true" signature="640:712" placeholder="SELECT user.... " />
+            <marker date="1489763419831" expanded="true" signature="640:713" placeholder="SELECT user.... ${CRUDUtils::$DB_USER}" />
+            <marker date="1489763419831" expanded="true" signature="4826:4962" placeholder="..." />
+            <marker date="1489763419831" expanded="true" signature="5775:5894" placeholder="..." />
+            <marker date="1489763419831" expanded="true" signature="5778:5889" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/category/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="83" column="2" selection-start-line="78" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/user/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/content/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="56" />
+          <folding>
+            <marker date="1489588151591" expanded="true" signature="1224:1275" placeholder="SELECT count... tbl_content" />
+            <marker date="1489588151591" expanded="true" signature="1290:1574" placeholder="SELECT DISTI... tbl_content" />
+            <marker date="1489588151591" expanded="true" signature="10890:11032" placeholder="..." />
+            <marker date="1489588151591" expanded="true" signature="11851:11976" placeholder="..." />
+            <marker date="1489588151591" expanded="true" signature="11854:11971" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-616">
+          <caret line="123" column="40" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/configdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/DB_ADAPTER.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="148" column="20" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="20" />
+          <folding>
+            <marker date="1489809053880" expanded="true" signature="2526:2596" placeholder="INSERT INTO ${$tb_name}... " />
+            <marker date="1489809053880" expanded="true" signature="3260:3296" placeholder="DELETE FROM " />
+            <marker date="1489809053880" expanded="true" signature="4849:4887" placeholder="SELECT * FRO... ${$tbl_name}" />
+            <marker date="1489809053880" expanded="true" signature="5444:5479" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1489809053880" expanded="true" signature="6132:6146" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1489809053880" expanded="true" signature="6838:6852" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1489809053880" expanded="true" signature="7986:8024" placeholder="SELECT * FRO... ${$tbl_name}" />
+            <marker date="1489809053880" expanded="true" signature="8644:8679" placeholder="SELECT * FRO... ${$table}" />
+            <marker date="1489809053880" expanded="true" signature="9378:9392" placeholder="SELECT * FRO... ${$tbl_name}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/utils/CRUDUtils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="10" selection-start-column="3" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="63" column="52" selection-start-line="63" selection-start-column="52" selection-end-line="63" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Utils/StatusCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Utils/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="794" column="12" selection-start-line="794" selection-start-column="12" selection-end-line="794" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/registerFb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+          <folding>
+            <marker date="1489809225965" expanded="true" signature="385:413" placeholder="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1489809225965" expanded="true" signature="486:514" placeholder="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1489809225965" expanded="true" signature="586:614" placeholder="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/includes/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

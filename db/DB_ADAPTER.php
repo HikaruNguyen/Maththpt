@@ -134,6 +134,21 @@ class DB_ADAPTER
         return $data;
     }
 
+    function get_count_use_query($sql)
+    {
+        $result = mysql_query($sql) or die(@mysql_error());
+        $num_rows = @mysql_num_rows($result);
+        $count = 0;
+        if ($num_rows > 0) {
+            while ($rows = @mysql_fetch_assoc($result)) {
+                foreach ($rows as $key => $value) {
+                    $count = $value;
+                }
+            }
+        }
+        return (int)$count;
+    }
+
     function get_by_conditions($tbl_name, $con)
     {
         if ($tbl_name != "") {

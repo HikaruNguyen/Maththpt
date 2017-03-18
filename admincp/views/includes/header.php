@@ -121,7 +121,7 @@
                     </li>
 
                     <li class="" id="Menu_Home">
-                        <a href="#">
+                        <a href="../home">
                             <i class="icon-home"></i>
                             <span class="title">Trang chủ</span>
                             <span class="selected"></span>
