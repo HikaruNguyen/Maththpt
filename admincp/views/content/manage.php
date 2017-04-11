@@ -144,7 +144,8 @@ if (isset($_SESSION['token'])) {
 
                             <img id="thumb" src="<?php echo $imageQuestion ?>" height="200" alt="Image preview..."
                                 <?php
-                                if (!isset($imageQuestion) || $imageQuestion == null || trim($imageQuestion) == "") {
+
+                                if (!isset($imageQuestion) || $imageQuestion == null || trim($imageQuestion) == "" ||!startsWith($imageQuestion,'data:image') ) {
                                     echo " style=\" display: none; \"";
                                 }
                                 ?>
@@ -386,6 +387,11 @@ if (!empty($_POST)) {
 
     }*/
     ob_end_flush();
+}
+function startsWith($haystack, $needle)
+{
+    $length = strlen($needle);
+    return (substr($haystack, 0, $length) === $needle);
 }
 ?>
 
