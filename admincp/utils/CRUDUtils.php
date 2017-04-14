@@ -144,11 +144,11 @@ class CRUDUtils
         return 0;
     }
 
-    public static function manageManager($type, $id, $username, $fullname, $email)
+    public static function manageManager($type, $id, $username, $fullname, $email, $typeUser)
     {
         $db = new DB_ADAPTER();
         if ($type == 'edit') {
-            $object = array("username" => $username, "fullname" => $fullname, "email" => $email);
+            $object = array("username" => $username, "fullname" => $fullname, "email" => $email, "type" => $typeUser);
             $condistion = array("id" => $id);
             $result = $db->update(CRUDUtils::$DB_MANAGER, $object, $condistion);
             if ($result == true) {
@@ -157,7 +157,7 @@ class CRUDUtils
                 return 0;
             }
         } else if ($type == 'add') {
-            $object = array("username" => $username, "fullname" => $fullname, "email" => $email);
+            $object = array("username" => $username, "fullname" => $fullname, "email" => $email, "type" => $typeUser);
             $result = $db->insert_to_database(CRUDUtils::$DB_MANAGER, $object);
             if ($result == true) {
                 return 1;
