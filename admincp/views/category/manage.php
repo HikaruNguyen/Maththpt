@@ -107,7 +107,8 @@ if (!empty($_POST)) {
                 $result = CRUDUtils::manageChuyenDe($type, $_POST['txtID'], $_POST['txtName']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
-                    header('location:../category');
+//                    header('location:../category');
+                    echo "<script>history.go(-2);</script>";
                 }
             }
         }

@@ -149,7 +149,8 @@ if (!empty($_POST)) {
                 $result = CRUDUtils::manageUser($type, $_POST['txtID'], $_POST['txtUserName'],$_POST['txtFullName'],$_POST['txtEmail'],$_POST['typeUser']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
-                    header('location:../user');
+//                    header('location:../user');
+                    echo "<script>history.go(-2);</script>";
                 }
             }
         }

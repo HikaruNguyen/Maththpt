@@ -94,7 +94,7 @@ if (isset($_SESSION['token'])) {
                                     ?>
                                 >Admin
                                 </option>
-                                <option value="0"
+                                <option value="2"
                                     <?php
                                     if ($typeUser == 2) {
                                         echo " Selected='selected'";
@@ -151,7 +151,8 @@ if (!empty($_POST)) {
                 $result = CRUDUtils::manageManager($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail'], $_POST['txtType']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
-                    header('location:../manager');
+//                    header('location:../manager');
+                    echo "<script>history.go(-2);</script>";
                 }
             }
         }

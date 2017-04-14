@@ -13,6 +13,7 @@ class CRUDUtils
     public static $DB_CONTAIN = "tbl_content";
     public static $DB_USER = "user";
     public static $DB_MANAGER = "tbl_manager";
+    public static $PASSWORD_ADMIN_DEFAUL = "admin123";
 
     public static function manageChuyenDe($type, $id, $name)
     {
@@ -157,7 +158,7 @@ class CRUDUtils
                 return 0;
             }
         } else if ($type == 'add') {
-            $object = array("username" => $username, "fullname" => $fullname, "email" => $email, "type" => $typeUser);
+            $object = array("username" => $username, "fullname" => $fullname, "email" => $email, "type" => $typeUser, "password" => sha1(CRUDUtils::$PASSWORD_ADMIN_DEFAUL));
             $result = $db->insert_to_database(CRUDUtils::$DB_MANAGER, $object);
             if ($result == true) {
                 return 1;
@@ -174,5 +175,18 @@ class CRUDUtils
             }
         }
         return 0;
+    }
+
+    public static function resetPasswordManager($id)
+    {
+        $db = new DB_ADAPTER();
+        $object = array("password" => sha1(CRUDUtils::$PASSWORD_ADMIN_DEFAUL));
+        $condistion = array("id" => $id);
+        $result = $db->update(CRUDUtils::$DB_MANAGER, $object, $condistion);
+        if ($result == true) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

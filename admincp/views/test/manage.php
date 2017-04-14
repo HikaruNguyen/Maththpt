@@ -140,7 +140,8 @@ if (!empty($_POST)) {
                 $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor'], $_POST['activated']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
-                    header('location:../test');
+//                    header('location:../test');
+                    echo "<script>history.go(-2);</script>";
                 }
             }
         }
