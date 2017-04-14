@@ -20,52 +20,52 @@ if (isset($_SESSION['token'])) {
     $countUser = $db->get_count_use_query("SELECT COUNT(id) as SL from " . CRUDUtils::$DB_USER);
     ?>
     <div class="row" style="margin-top: 10px">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="dashboard-stat box1">
-                <div class="visual">
-                    <i class="fa fa-book"></i>
-                </div>
-                <div class="details">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bordered">
+            <div class="dashboard-stat2 ">
+                <div class="display">
                     <div class="number">
-                        <?php echo $countTests ?>
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup" data-value="7800"> <?php echo $countTests ?></span>
+                            <small class="font-green-sharp">Đề</small>
+                        </h3>
+                        <small>Số lượng đề thi</small>
                     </div>
-                    <div class="desc">
-                        Số lượng đề thi
+                    <div class="icon">
+                        <i class="fa fa-book"></i>
                     </div>
                 </div>
-                <span class="more"></span>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="dashboard-stat box2">
-                <div class="visual">
-                    <i class="fa fa-file"></i>
-                </div>
-                <div class="details">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bordered">
+            <div class="dashboard-stat2 ">
+                <div class="display">
                     <div class="number">
-                        <?php echo $countQuestion ?>
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup" data-value="7800"> <?php echo $countQuestion ?></span>
+                            <small class="font-green-sharp">Câu</small>
+                        </h3>
+                        <small>Số lượng câu hỏi</small>
                     </div>
-                    <div class="desc">
-                        Số lượng câu hỏi
+                    <div class="icon">
+                        <i class="fa fa-file"></i>
                     </div>
                 </div>
-                <span class="more"></span>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <div class="dashboard-stat box3">
-                <div class="visual">
-                    <i class="fa fa-group"></i>
-                </div>
-                <div class="details">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bordered">
+            <div class="dashboard-stat2 ">
+                <div class="display">
                     <div class="number">
-                        <?php echo $countUser ?>
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup" data-value="7800"> <?php echo $countUser ?></span>
+                            <small class="font-green-sharp">thành viên</small>
+                        </h3>
+                        <small>Số lượng thành viên</small>
                     </div>
-                    <div class="desc">
-                        Số lượng thành viên
+                    <div class="icon">
+                        <i class="fa fa-group"></i>
                     </div>
                 </div>
-                <span class="more"></span>
             </div>
         </div>
     </div>
@@ -190,7 +190,7 @@ if (isset($_SESSION['token'])) {
         </div>
     </div>
     <div class="row">
-        
+
     </div>
     <div class="row">
         <div class="col-md-12">
