@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a3949b-9f37-45da-82db-9d72ba8d9898" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/logout.php" afterPath="$PROJECT_DIR$/admincp/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/login.php" afterPath="$PROJECT_DIR$/admincp/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admincp/views/test/index.php" afterPath="$PROJECT_DIR$/admincp/views/test/index.php" />
     </list>
     <ignored path="Maththpt.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,11 +20,13 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -31,50 +35,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
+        <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2340">
-              <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+            <state relative-caret-position="121">
+              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
               <folding>
-                <marker date="1490070627974" expanded="true" signature="523:551" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
-                <marker date="1490070627974" expanded="true" signature="624:652" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
-                <marker date="1490070627974" expanded="true" signature="724:752" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
-                <marker date="1490070627974" expanded="true" signature="3364:3480" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1490070627974" expanded="true" signature="3397:3426" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1490070627974" expanded="true" signature="6642:6754" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1490070627974" expanded="true" signature="6673:6700" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1490070627974" expanded="true" signature="9985:10112" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
-                <marker date="1490070627974" expanded="true" signature="10033:10062" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admincp/views/includes/home.php">
+      <file leaf-file-name="manage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admincp/views/test/manage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admincp/logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admincp/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="31" />
+            <state relative-caret-position="337">
+              <caret line="144" column="17" lean-forward="true" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -93,8 +69,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>reset_password</find>
-      <find>$typeUser</find>
       <find>hrefFilter</find>
+      <find>$typeUser</find>
+      <find>none</find>
+      <find>deleteImage</find>
+      <find>previewFile</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,11 +109,9 @@
         <option value="$PROJECT_DIR$/api/test/get-test.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/api/user/exam.php" />
-        <option value="$PROJECT_DIR$/admincp/views/test/index.php" />
         <option value="$PROJECT_DIR$/admincp/views/content/index.php" />
         <option value="$PROJECT_DIR$/admincp/views/user/index.php" />
         <option value="$PROJECT_DIR$/db/DB_ADAPTER.php" />
-        <option value="$PROJECT_DIR$/admincp/views/home/index.php" />
         <option value="$PROJECT_DIR$/api/Utils/StatusCode.php" />
         <option value="$PROJECT_DIR$/api/Utils/Utils.php" />
         <option value="$PROJECT_DIR$/api/user/register.php" />
@@ -143,7 +120,6 @@
         <option value="$PROJECT_DIR$/api/content/get-test.php" />
         <option value="$PROJECT_DIR$/api/content/get-content.php" />
         <option value="$PROJECT_DIR$/api/content/exam.php" />
-        <option value="$PROJECT_DIR$/admincp/login.php" />
         <option value="$PROJECT_DIR$/admincp/views/includes/header.php" />
         <option value="$PROJECT_DIR$/admincp/utils/CRUDUtils.php" />
         <option value="$PROJECT_DIR$/admincp/views/manager/index.php" />
@@ -154,6 +130,9 @@
         <option value="$PROJECT_DIR$/admincp/views/category/manage.php" />
         <option value="$PROJECT_DIR$/admincp/views/user/manage.php" />
         <option value="$PROJECT_DIR$/admincp/logout.php" />
+        <option value="$PROJECT_DIR$/admincp/views/home/index.php" />
+        <option value="$PROJECT_DIR$/admincp/login.php" />
+        <option value="$PROJECT_DIR$/admincp/views/test/index.php" />
       </list>
     </option>
   </component>
@@ -231,10 +210,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -258,116 +233,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Maththpt" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admincp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="category" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -381,6 +246,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -520,7 +386,7 @@
       <workItem from="1489807625544" duration="10463000" />
       <workItem from="1489843641831" duration="474000" />
       <workItem from="1491873858674" duration="1882000" />
-      <workItem from="1492138229535" duration="5744000" />
+      <workItem from="1492138229535" duration="10241000" />
     </task>
     <task id="LOCAL-00001" summary="fix image">
       <created>1491876080754</created>
@@ -533,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169385000" />
+    <option name="totallyTimeSpent" value="173882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1984" y="-11" width="1857" height="1092" extended-state="6" />
@@ -542,7 +408,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18739635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35962147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -649,13 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/category/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="83" column="2" lean-forward="false" selection-start-line="78" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -802,14 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -853,34 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/test/manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="143" column="60" lean-forward="false" selection-start-line="143" selection-start-column="60" selection-end-line="143" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/content/AjaxCK.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="71" lean-forward="false" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/content/manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/manager/manage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -912,21 +739,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
+    <entry file="file://$PROJECT_DIR$/admincp/logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2340">
-          <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
-          <folding>
-            <marker date="1490070627974" expanded="true" signature="523:551" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
-            <marker date="1490070627974" expanded="true" signature="624:652" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
-            <marker date="1490070627974" expanded="true" signature="724:752" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
-            <marker date="1490070627974" expanded="true" signature="3364:3480" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1490070627974" expanded="true" signature="3397:3426" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1490070627974" expanded="true" signature="6642:6754" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1490070627974" expanded="true" signature="6673:6700" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1490070627974" expanded="true" signature="9985:10112" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
-            <marker date="1490070627974" expanded="true" signature="10033:10062" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -938,18 +755,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/login.php">
+    <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="31" />
+        <state relative-caret-position="324">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding>
+            <marker date="1492144212573" expanded="true" signature="523:551" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492144212573" expanded="true" signature="624:652" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
+            <marker date="1492144212573" expanded="true" signature="724:752" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
+            <marker date="1492144212573" expanded="true" signature="3364:3480" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492144212573" expanded="true" signature="3397:3426" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492144212573" expanded="true" signature="6642:6754" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492144212573" expanded="true" signature="6673:6700" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492144212573" expanded="true" signature="9985:10112" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492144212573" expanded="true" signature="10033:10062" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/manager/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="154" column="60" lean-forward="true" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admincp/logout.php">
+    <entry file="file://$PROJECT_DIR$/admincp/views/content/manage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="-541">
+          <caret line="344" column="24" lean-forward="false" selection-start-line="344" selection-start-column="13" selection-end-line="344" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="35" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/category/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1192">
+          <caret line="83" column="2" lean-forward="false" selection-start-line="78" selection-start-column="2" selection-end-line="83" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/test/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admincp/views/test/manage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="144" column="17" lean-forward="true" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="17" />
           <folding />
         </state>
       </provider>
