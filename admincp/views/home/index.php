@@ -15,12 +15,29 @@ if (isset($_SESSION['token'])) {
     require_once('../../utils/CRUDUtils.php');
     include '../includes/header.php';
     $db = new DB_ADAPTER();
+    $countCategory = $db->get_count_use_query("SELECT COUNT(id) as SL from " . CRUDUtils::$DB_CATEGORY);
     $countTests = $db->get_count_use_query("SELECT COUNT(id) as SL from " . CRUDUtils::$DB_BODE);
     $countQuestion = $db->get_count_use_query("SELECT COUNT(id) as SL from " . CRUDUtils::$DB_CONTAIN);
     $countUser = $db->get_count_use_query("SELECT COUNT(id) as SL from " . CRUDUtils::$DB_USER);
     ?>
     <div class="row" style="margin-top: 10px">
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bordered">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bordered">
+            <div class="dashboard-stat2 ">
+                <div class="display">
+                    <div class="number">
+                        <h3 class="font-green-sharp">
+                            <span data-counter="counterup" data-value="7800"> <?php echo $countCategory ?></span>
+                            <small class="font-green-sharp">Đề</small>
+                        </h3>
+                        <small>Số lượng chuyên đề</small>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bordered">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
@@ -36,7 +53,7 @@ if (isset($_SESSION['token'])) {
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bordered">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bordered">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
@@ -52,7 +69,7 @@ if (isset($_SESSION['token'])) {
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bordered">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 bordered">
             <div class="dashboard-stat2 ">
                 <div class="display">
                     <div class="number">
@@ -86,12 +103,12 @@ if (isset($_SESSION['token'])) {
                     <div id="chart_4" class="chart" style="height: 400px;">
                         <div id="chartCategory"></div>
                         <?php
-                        $sql_count = "SELECT id,name, countReview*100/(select sum(countReview) from " . CRUDUtils::$DB_CATEGORY . " ) as countReview FROM " . CRUDUtils::$DB_CATEGORY;
+                        $sql_count = "SELECT id,name, countReview as countR, countReview*100/(select sum(countReview) from " . CRUDUtils::$DB_CATEGORY . " ) as countReview FROM " . CRUDUtils::$DB_CATEGORY;
                         $result = $db->get_data_use_query($sql_count);
                         $dataPoints = array();
                         if ($result != null && count($result) > 0) {
                             for ($i = 0; $i < count($result); $i++) {
-                                array_push($dataPoints, array("y" => (float)round($result[$i]["countReview"], 2), "legendText" => $result[$i]["name"], "label" => $result[$i]["name"]));
+                                array_push($dataPoints, array("countR" => $result[$i]["countR"], "y" => (float)round($result[$i]["countReview"], 2), "legendText" => $result[$i]["name"], "label" => $result[$i]["name"]));
                             }
                         }
                         ?>
@@ -108,16 +125,16 @@ if (isset($_SESSION['token'])) {
                                         fontSize: 15,
                                         fontFamily: "Roboto"
                                     },
-                                    theme: "theme2",
+                                    theme: "theme1",
                                     data: [
                                         {
                                             type: "pie",
                                             indexLabelFontFamily: "Garamond",
                                             indexLabelFontSize: 13,
-                                            indexLabel: "{label} {y}%",
+                                            indexLabel: "{countR} ({y}%)",
                                             startAngle: -20,
                                             showInLegend: true,
-                                            toolTipContent: "{legendText} {y}%",
+                                            toolTipContent: "{legendText}",
                                             dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
                                         }
                                     ]
@@ -144,12 +161,12 @@ if (isset($_SESSION['token'])) {
                     <div id="chart_4" class="chart" style="height: 400px;">
                         <div id="chartCategoryExam"></div>
                         <?php
-                        $sql_count = "SELECT id,name, countExam*100/(select sum(countExam) from " . CRUDUtils::$DB_CATEGORY . " ) as countReview FROM " . CRUDUtils::$DB_CATEGORY;
+                        $sql_count = "SELECT id,name,countExam as countE, countExam*100/(select sum(countExam) from " . CRUDUtils::$DB_CATEGORY . " ) as countReview FROM " . CRUDUtils::$DB_CATEGORY;
                         $result = $db->get_data_use_query($sql_count);
                         $dataPoints = array();
                         if ($result != null && count($result) > 0) {
                             for ($i = 0; $i < count($result); $i++) {
-                                array_push($dataPoints, array("y" => (float)round($result[$i]["countReview"], 2), "legendText" => $result[$i]["name"], "label" => $result[$i]["name"]));
+                                array_push($dataPoints, array("countE" => $result[$i]["countE"],"y" => (float)round($result[$i]["countReview"], 2), "legendText" => $result[$i]["name"], "label" => $result[$i]["name"]));
                             }
                         }
                         ?>
@@ -172,10 +189,10 @@ if (isset($_SESSION['token'])) {
                                             type: "pie",
                                             indexLabelFontFamily: "Garamond",
                                             indexLabelFontSize: 13,
-                                            indexLabel: "{label} {y}%",
+                                            indexLabel: "{countE} ({y}%)",
                                             startAngle: -20,
                                             showInLegend: true,
-                                            toolTipContent: "{legendText} {y}%",
+                                            toolTipContent: "{legendText}",
                                             dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
                                         }
                                     ]
@@ -207,7 +224,8 @@ if (isset($_SESSION['token'])) {
                     <div id="chart_4" class="chart" style="height: 400px;">
                         <div id="chartTests"></div>
                         <?php
-                        $sql_count = "SELECT id,displayname as name, countReview*100/(select sum(countReview) from " . CRUDUtils::$DB_BODE . " ) as countReview FROM " . CRUDUtils::$DB_BODE;
+//                        $sql_count = "SELECT id,displayname as name, countReview*100/(select sum(countReview) from " . CRUDUtils::$DB_BODE . " ) as countReview FROM " . CRUDUtils::$DB_BODE;
+                        $sql_count = "SELECT id,displayname as name, countReview as countReview FROM " . CRUDUtils::$DB_BODE;
                         $result = $db->get_data_use_query($sql_count);
 
                         $dataTests = array();
@@ -230,13 +248,13 @@ if (isset($_SESSION['token'])) {
                                         fontSize: 15,
                                         fontFamily: "Roboto"
                                     },
-                                    theme: "theme2",
+                                    theme: "theme1",
                                     data: [
                                         {
-                                            type: "pie",
+                                            type: "column",
                                             indexLabelFontFamily: "Garamond",
                                             indexLabelFontSize: 13,
-                                            indexLabel: "{label} {y}%",
+                                            indexLabel: "{y}",
                                             startAngle: -20,
                                             showInLegend: true,
                                             toolTipContent: "{legendText} {y}%",

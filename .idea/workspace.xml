@@ -35,19 +35,21 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="146" column="63" lean-forward="false" selection-start-line="146" selection-start-column="54" selection-end-line="146" selection-end-column="63" />
+            <state relative-caret-position="522">
+              <caret line="34" column="48" lean-forward="false" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1492153324713" expanded="true" signature="523:551" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
-                <marker date="1492153324713" expanded="true" signature="624:652" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
-                <marker date="1492153324713" expanded="true" signature="724:752" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
-                <marker date="1492153324713" expanded="true" signature="3787:3903" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1492153324713" expanded="true" signature="3820:3849" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1492153324713" expanded="true" signature="7065:7177" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1492153324713" expanded="true" signature="7096:7123" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-                <marker date="1492153324713" expanded="true" signature="10400:10527" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
-                <marker date="1492153324713" expanded="true" signature="10448:10477" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1492154573227" expanded="true" signature="526:554" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1492154573227" expanded="true" signature="628:656" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1492154573227" expanded="true" signature="729:757" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
+                <marker date="1492154573227" expanded="true" signature="829:857" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
+                <marker date="1492154573227" expanded="true" signature="4614:4753" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
+                <marker date="1492154573227" expanded="true" signature="4670:4699" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
+                <marker date="1492154573227" expanded="true" signature="7948:8080" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
+                <marker date="1492154573227" expanded="true" signature="7999:8026" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
+                <marker date="1492154573227" expanded="true" signature="11337:11464" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1492154573227" expanded="true" signature="11385:11414" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
+                <marker date="1492154573227" expanded="true" signature="11527:11590" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
               </folding>
             </state>
           </provider>
@@ -383,7 +385,7 @@
       <workItem from="1489807625544" duration="10463000" />
       <workItem from="1489843641831" duration="474000" />
       <workItem from="1491873858674" duration="1882000" />
-      <workItem from="1492138229535" duration="10717000" />
+      <workItem from="1492138229535" duration="12089000" />
     </task>
     <task id="LOCAL-00001" summary="fix image">
       <created>1491876080754</created>
@@ -396,11 +398,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174358000" />
+    <option name="totallyTimeSpent" value="175730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1984" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18739635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -410,7 +411,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -802,19 +803,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admincp/views/home/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="146" column="63" lean-forward="false" selection-start-line="146" selection-start-column="54" selection-end-line="146" selection-end-column="63" />
+        <state relative-caret-position="522">
+          <caret line="34" column="48" lean-forward="false" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1492153324713" expanded="true" signature="523:551" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
-            <marker date="1492153324713" expanded="true" signature="624:652" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
-            <marker date="1492153324713" expanded="true" signature="724:752" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
-            <marker date="1492153324713" expanded="true" signature="3787:3903" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1492153324713" expanded="true" signature="3820:3849" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1492153324713" expanded="true" signature="7065:7177" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1492153324713" expanded="true" signature="7096:7123" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
-            <marker date="1492153324713" expanded="true" signature="10400:10527" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
-            <marker date="1492153324713" expanded="true" signature="10448:10477" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492154573227" expanded="true" signature="526:554" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492154573227" expanded="true" signature="628:656" ph="SELECT COUNT... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492154573227" expanded="true" signature="729:757" ph="SELECT COUNT... ${CRUDUtils::$DB_CONTAIN}" />
+            <marker date="1492154573227" expanded="true" signature="829:857" ph="SELECT COUNT... ${CRUDUtils::$DB_USER}" />
+            <marker date="1492154573227" expanded="true" signature="4614:4753" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492154573227" expanded="true" signature="4670:4699" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492154573227" expanded="true" signature="7948:8080" ph="SELECT id,na... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492154573227" expanded="true" signature="7999:8026" ph="select sum(c... ${CRUDUtils::$DB_CATEGORY}" />
+            <marker date="1492154573227" expanded="true" signature="11337:11464" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492154573227" expanded="true" signature="11385:11414" ph="select sum(c... ${CRUDUtils::$DB_BODE}" />
+            <marker date="1492154573227" expanded="true" signature="11527:11590" ph="SELECT id,di... ${CRUDUtils::$DB_BODE}" />
           </folding>
         </state>
       </provider>
