@@ -58,6 +58,7 @@ if (isset($_POST['txtUserName']) && isset($_POST['txtPassword'])) {
         if (count($result) > 0) {
             $_SESSION['token'] = sha1($username + $password);
             $_SESSION['username'] = $username;
+            $_SESSION['typeUser'] = $result[0]['type'];
             header('location:views/home');
         } else {
             $message = "Kiểm tra lại tài khoản và mật khẩu ";

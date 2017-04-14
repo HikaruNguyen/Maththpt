@@ -13,8 +13,8 @@
     <title>HỆ THỐNG TRẮC NGHIỆM TOÁN HỌC THPT</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="" name="description"/>
-    <meta content="" name="author"/>
+    <meta content="HỆ THỐNG TRẮC NGHIỆM TOÁN HỌC THPT" name="description"/>
+    <meta content="Nguyen Duc Manh" name="author"/>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
           type="text/css"/>
     <link href="../../../public/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
@@ -66,7 +66,7 @@
                            data-close-others="true">
                             <img alt="" class="img-circle"
                                  src="../../../public/assets/admin/layout/img/avatar3_small.jpg"/>
-                                <span class="username username-hide-on-mobile">
+                            <span class="username username-hide-on-mobile">
                                     <label id="txtUserName">
 
                                         Xin chào
@@ -147,38 +147,26 @@
                             <span class="title">Quản lý câu hỏi</span>
                         </a>
                     </li>
-                    <li id="Menu_User">
-                        <a href="../user">
-                            <i class="fa fa-group"></i>
-                            <span class="title">Quản lý người dùng</span>
+                    <?php
+                    if (isset($_SESSION['typeUser'])) {
+                        if ((int)$_SESSION['typeUser'] == 1) {
+                            echo "<li id=\"Menu_User\">
+                        <a href=\"../user\">
+                            <i class=\"fa fa-group\"></i>
+                            <span class=\"title\">Quản lý người dùng</span>
                         </a>
                     </li>
-                    <!--                    <li id="Menu_ThongKe">-->
-                    <!--                        <a href="javascript:;">-->
-                    <!--                            <i class="icon-bar-chart"></i>-->
-                    <!--                            <span class="title">Báo cáo thống kê</span>-->
-                    <!--                            <span class="arrow "></span>-->
-                    <!--                        </a>-->
-                    <!--                        <ul class="sub-menu">-->
-                    <!--                            <li id="tk_doanhthu">-->
-                    <!--                                <a href="">Thống kê doanh thu</a>-->
-                    <!--                            </li>-->
-                    <!--                            <li id="tk_nhapxuat">-->
-                    <!--                                <a href="">Thống kê nhập xuất</a>-->
-                    <!--                            </li>-->
-                    <!--                            <li id="tk_khachhang">-->
-                    <!--                                <a href="">Thống kê khách hàng</a>-->
-                    <!--                            </li>-->
-                    <!--                        </ul>-->
-                    <!--                    </li>-->
-
-                    <li id="Menu_Manager">
-                        <a href="../manager">
-                            <i class="icon-user"></i>
-                            <span class="title">Quản lý quản trị viên</span>
+                    <li id=\"Menu_Manager\">
+                        <a href=\"../manager\">
+                            <i class=\"icon-user\"></i>
+                            <span class=\"title\">Quản lý quản trị viên</span>
 
                         </a>
-                    </li>
+                    </li>";
+                        }
+                    }
+                    ?>
+
                 </ul>
                 <!-- END SIDEBAR MENU -->
             </div>
