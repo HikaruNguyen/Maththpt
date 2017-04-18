@@ -334,66 +334,47 @@ if (isset($_SESSION['token'])) {
         </script>
         <?php
 
+
+        include '../includes/footer.php';
+
+        ?>
+        <script>
+            document.getElementById("Menu_Contain").className = "active open";
+            function previewFile() {
+                var preview = document.getElementById("thumb");
+                preview.style.display = "";
+                document.getElementById("delImg").style.display = "";
+                var file = document.getElementById("uploadimg").files[0];
+                var reader = new FileReader();
+
+                reader.addEventListener("load", function () {
+                    preview.src = reader.result;
+                }, false);
+
+                if (file) {
+                    reader.readAsDataURL(file);
+                }
+            }
+            function deleteImage() {
+                document.getElementById('thumb').removeAttribute("src");
+                document.getElementById('thumb').style.display = "none";
+                document.getElementById('delImg').style.display = "none";
+            }
+        </script>
+        <?php
+        if (!empty($_POST)) {
+            var_dump($type . " " . $_POST['editorQuestion'] . " " . $_POST['editorQuestion']);
+            ob_start();
+            ob_end_flush();
+        }
+        function startsWith($haystack, $needle)
+        {
+            $length = strlen($needle);
+            return (substr($haystack, 0, $length) === $needle);
+        }
     }
-    include '../includes/footer.php';
 } else {
     header('location:../../login.php');
 }
-?>
-<script>
-    document.getElementById("Menu_Contain").className = "active open";
-    function previewFile() {
-        var preview = document.getElementById("thumb");
-        preview.style.display = "";
-        document.getElementById("delImg").style.display = "";
-        var file = document.getElementById("uploadimg").files[0];
-        var reader = new FileReader();
-
-        reader.addEventListener("load", function () {
-            preview.src = reader.result;
-        }, false);
-
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    }
-    function deleteImage() {
-        document.getElementById('thumb').removeAttribute("src");
-        document.getElementById('thumb').style.display = "none";
-        document.getElementById('delImg').style.display = "none";
-    }
-</script>
-<?php
-if (!empty($_POST)) {
-    var_dump($type . " " . $_POST['editorQuestion'] . " " . $_POST['editorQuestion']);
-    ob_start();
-    /*if ($type != null && trim($type) != "") {
-        if ((isset($_POST['txtID']) || $type == 'add')
-            && isset($_POST['editorQuestion']) && isset($_POST['editorAnswer1'])
-            && isset($_POST['editorAnswer2']) && isset($_POST['editorAnswer3'])
-            && isset($_POST['editorAnswer3']) && isset($_POST['editorAnswer4']) && ($_POST['answer'])
-        ) {
-
-            if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtName'] != null && trim($_POST['txtName']) != ""
-                && $_POST['txtAuthor'] != null && trim($_POST['txtAuthor'])
-            ) {
-                $result = 0;
-                $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor']);
-    //            var_dump("result " . $result);
-                if ($result == 1) {
-                    header('location:../test');
-                }
-            }
-        }
-
-    }*/
-    ob_end_flush();
-}
-function startsWith($haystack, $needle)
-{
-    $length = strlen($needle);
-    return (substr($haystack, 0, $length) === $needle);
-}
-
 ?>
 

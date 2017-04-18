@@ -35,6 +35,12 @@ if (isset($_SESSION['token'])) {
             }
         }
         ?>
+        <script>
+            function showMessage(message) {
+                document.getElementById('divMessage').style.display = "block";
+                document.getElementById('spanMessage').innerHTML = message;
+            }
+        </script>
         <form action="" method="post">
             <div class="portlet box blue">
                 <div class="portlet-title">
@@ -52,11 +58,9 @@ if (isset($_SESSION['token'])) {
                     </div>
                 </div>
                 <div class="portlet-body form">
-                    <div class="alert alert-danger" id="div_error" style="display: none">
-                <span>
-<!--                    <asp:Label ID="lblError" runat="server" Text="Đã xảy ra lỗi"></asp:Label>-->
-
-                </span>
+                    <div id="divMessage" class="alert alert-danger display-hide" style="display: none;">
+                        <button class="close" data-close="alert"></button>
+                        <span id="spanMessage"></span>
                     </div>
                     <div class="form-body">
                         <div class="form-group">
@@ -124,40 +128,52 @@ if (isset($_SESSION['token'])) {
 
 
         <?php
-    }
-    include '../includes/footer.php';
-} else {
-    header('location:../../login.php');
-}
-?>
-    <script>
-        document.getElementById("Menu_Manager").className = "active open";
-    </script>
-<?php
-if (!empty($_POST)) {
-    ob_start();
 
-    if ($type != null && trim($type) != "") {
-        if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtUserName'])
-            && isset($_POST['txtFullName']) && isset($_POST['txtEmail'])
-        ) {
+        include '../includes/footer.php';
 
-            if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtUserName'] != null && trim($_POST['txtUserName']) != ""
-                && $_POST['txtFullName'] != null && trim($_POST['txtFullName']) != ""
-                && $_POST['txtEmail'] != null && trim($_POST['txtEmail']) != ""
+        ?>
+        <script>
+            document.getElementById("Menu_Manager").className = "active open";
+        </script>
+        <?php
+        if (!empty($_POST)) {
+            ob_start();
 
-            ) {
-                $result = 0;
-                $result = CRUDUtils::manageManager($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail'], $_POST['txtType']);
-//            var_dump("result " . $result);
-                if ($result == 1) {
-//                    header('location:../manager');
-                    echo "<script>history.go(-2);</script>";
+            if ($type != null && trim($type) != "") {
+                if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtUserName'])
+                    && isset($_POST['txtFullName']) && isset($_POST['txtEmail'])
+                ) {
+
+                    if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtUserName'] != null && trim($_POST['txtUserName']) != ""
+                        && $_POST['txtFullName'] != null && trim($_POST['txtFullName']) != ""
+                        && $_POST['txtEmail'] != null && trim($_POST['txtEmail']) != ""
+                    ) {
+                        $result = 0;
+                        $result = CRUDUtils::manageManager($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail'], $_POST['txtType']);
+                        if ($result == 1) {
+                            echo "<script>history.go(-2);</script>";
+                        }
+                    } else {
+                        if ($_POST['txtUserName'] == null || trim($_POST['txtUserName']) == "") {
+                            $message = "Tên đăng nhập không được để trống";
+                            echo "<script type='text/javascript'>showMessage('$message');</script>;";
+                        } else if ($_POST['txtFullName'] == null || trim($_POST['txtFullName']) == "") {
+                            $message = "Tên đẩy đủ không được để trống";
+                            echo "<script type='text/javascript'>showMessage('$message');</script>;";
+                        } else if ($_POST['txtEmail'] == null && trim($_POST['txtEmail']) == "") {
+                            $message = "Email không được để trống";
+                            echo "<script type='text/javascript'>showMessage('$message');</script>;";
+                        }
+                    }
+                } else {
+                    $message = "Tên chuyên đề không được để trông";
+                    echo "<script type='text/javascript'>showMessage('$message');</script>;";
                 }
             }
+            ob_end_flush();
         }
-
     }
-    ob_end_flush();
+} else {
+    header('location:../../login.php');
 }
 ?>

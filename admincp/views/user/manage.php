@@ -124,38 +124,42 @@ if (isset($_SESSION['token'])) {
 
 
         <?php
+
+        include '../includes/footer.php';
+
+        ?>
+        <script>
+            document.getElementById("Menu_User").className = "active open";
+        </script>
+        <?php
+        if (!empty($_POST)) {
+            ob_start();
+
+            if ($type != null && trim($type) != "") {
+                if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtUserName'])
+                    && isset($_POST['txtFullName']) && isset($_POST['txtEmail']) && isset($_POST['typeUser'])
+                ) {
+
+                    if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtUserName'] != null && trim($_POST['txtUserName']) != ""
+                        && $_POST['txtFullName'] != null && trim($_POST['txtFullName']) != ""
+                        && $_POST['txtEmail'] != null && trim($_POST['txtEmail']) != ""
+                        && $_POST['typeUser'] != null && trim($_POST['typeUser']) != ""
+                    ) {
+                        $result = 0;
+                        $result = CRUDUtils::manageUser($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail'], $_POST['typeUser']);
+//            var_dump("result " . $result);
+                        if ($result == 1) {
+//                    header('location:../user');
+                            echo "<script>history.go(-2);</script>";
+                        }
+                    }
+                }
+
+            }
+            ob_end_flush();
+        }
     }
-    include '../includes/footer.php';
 } else {
     header('location:../../login.php');
-}
-?>
-    <script>
-        document.getElementById("Menu_User").className = "active open";
-    </script>
-<?php
-if (!empty($_POST)) {
-    ob_start();
-
-    if ($type != null && trim($type) != "") {
-        if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtUserName'])
-            && isset($_POST['txtFullName'])&& isset($_POST['txtEmail'])&& isset($_POST['typeUser'])) {
-
-            if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtUserName'] != null && trim($_POST['txtUserName']) != ""
-                && $_POST['txtFullName'] != null && trim($_POST['txtFullName']) != ""
-                && $_POST['txtEmail'] != null && trim($_POST['txtEmail']) != ""
-                && $_POST['typeUser'] != null && trim($_POST['typeUser']) != "") {
-                $result = 0;
-                $result = CRUDUtils::manageUser($type, $_POST['txtID'], $_POST['txtUserName'],$_POST['txtFullName'],$_POST['txtEmail'],$_POST['typeUser']);
-//            var_dump("result " . $result);
-                if ($result == 1) {
-//                    header('location:../user');
-                    echo "<script>history.go(-2);</script>";
-                }
-            }
-        }
-
-    }
-    ob_end_flush();
 }
 ?>

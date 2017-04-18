@@ -29,6 +29,12 @@ if (isset($_SESSION['token'])) {
             }
         }
         ?>
+        <script>
+            function showMessage(message) {
+                document.getElementById('divMessage').style.display = "block";
+                document.getElementById('spanMessage').innerHTML = message;
+            }
+        </script>
         <form action="" method="post">
             <div class="portlet box blue">
                 <div class="portlet-title">
@@ -46,11 +52,9 @@ if (isset($_SESSION['token'])) {
                     </div>
                 </div>
                 <div class="portlet-body form">
-                    <div class="alert alert-danger" id="div_error" style="display: none">
-                <span>
-<!--                    <asp:Label ID="lblError" runat="server" Text="Đã xảy ra lỗi"></asp:Label>-->
-
-                </span>
+                    <div id="divMessage" class="alert alert-danger display-hide" style="display: none;">
+                        <button class="close" data-close="alert"></button>
+                        <span id="spanMessage"></span>
                     </div>
                     <div class="form-body">
                         <div class="form-group">
@@ -86,34 +90,45 @@ if (isset($_SESSION['token'])) {
 
 
         <?php
+
+        include '../includes/footer.php';
+
+        ?>
+        <script>
+            document.getElementById("Menu_ChuyenDe").className = "active open";
+        </script>
+        <?php
+        if (!empty($_POST)) {
+            ob_start();
+
+            if ($type != null && trim($type) != "") {
+                if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtName'])) {
+
+                    if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtName'] != null && trim($_POST['txtName']) != "") {
+                        $result = 0;
+                        $result = CRUDUtils::manageChuyenDe($type, $_POST['txtID'], $_POST['txtName']);
+                        if ($result == 1) {
+                            echo "<script>history.go(-2);</script>";
+                        } else {
+                            $message = "Đã xảy ra lỗi, vui lòng kiểm tra lại";
+                            echo "<script type='text/javascript'>showMessage('$message');</script>;";
+                        }
+                    } else {
+                        if ($_POST['txtName'] == null || trim($_POST['txtName']) == "") {
+                            $message = "Tên chuyên đề không được để trống";
+                            echo "<script type='text/javascript'>showMessage('$message');</script>;";
+                        }
+                    }
+                } else {
+                    $message = "Đã xảy ra lỗi, vui lòng kiểm tra lại";
+                    echo "<script type='text/javascript'>showMessage('$message');</script>;";
+                }
+
+            }
+            ob_end_flush();
+        }
     }
-    include '../includes/footer.php';
 } else {
     header('location:../../login.php');
-}
-?>
-    <script>
-        document.getElementById("Menu_ChuyenDe").className = "active open";
-    </script>
-<?php
-if (!empty($_POST)) {
-    ob_start();
-
-    if ($type != null && trim($type) != "") {
-        if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtName'])) {
-
-            if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtName'] != null && trim($_POST['txtName']) != "") {
-                $result = 0;
-                $result = CRUDUtils::manageChuyenDe($type, $_POST['txtID'], $_POST['txtName']);
-//            var_dump("result " . $result);
-                if ($result == 1) {
-//                    header('location:../category');
-                    echo "<script>history.go(-2);</script>";
-                }
-            }
-        }
-
-    }
-    ob_end_flush();
 }
 ?>

@@ -27,7 +27,7 @@ if (isset($_SESSION['token'])) {
                     <div class="number">
                         <h3 class="font-green-sharp">
                             <span data-counter="counterup" data-value="7800"> <?php echo $countCategory ?></span>
-                            <small class="font-green-sharp">Đề</small>
+                            <small class="font-green-sharp">Chuyên đề</small>
                         </h3>
                         <small>Số lượng chuyên đề</small>
                     </div>
@@ -316,11 +316,12 @@ if (isset($_SESSION['token'])) {
                                         {
                                             type: "column",
                                             indexLabelFontFamily: "Garamond",
+                                            name: "Số lượng",
                                             indexLabelFontSize: 13,
                                             indexLabel: "{y}",
                                             startAngle: -20,
                                             showInLegend: true,
-                                            toolTipContent: "{legendText} {y}%",
+                                            toolTipContent: "{legendText}",
                                             dataPoints: <?php echo json_encode($dataTests, JSON_NUMERIC_CHECK); ?>
                                         }
                                     ]
