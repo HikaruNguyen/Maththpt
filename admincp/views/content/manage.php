@@ -16,6 +16,11 @@ if (isset($_SESSION['token'])) {
     include '../includes/header.php';
     $delImg = 0;
     $db = new DB_ADAPTER();
+    function startsWith($haystack, $needle)
+    {
+        $length = strlen($needle);
+        return (substr($haystack, 0, $length) === $needle);
+    }
     if (isset($_GET['type'])) {
         $type = $_GET['type'];
         $idContent = "";
@@ -223,7 +228,7 @@ if (isset($_SESSION['token'])) {
                                 </option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" style="display: inline-block">
                             Chuyên đề
                             (*)
                             <select class="form-control" name="category" id="category">
@@ -367,11 +372,9 @@ if (isset($_SESSION['token'])) {
             ob_start();
             ob_end_flush();
         }
-        function startsWith($haystack, $needle)
-        {
-            $length = strlen($needle);
-            return (substr($haystack, 0, $length) === $needle);
-        }
+       
+
+
     }
 } else {
     header('location:../../login.php');
