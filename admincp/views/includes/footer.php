@@ -71,10 +71,10 @@
         Layout.init(); // init layout
         QuickSidebar.init(); // init quick sidebar
         Demo.init(); // init demo features
-        Index.init();
-        Index.initChat();
-        Index.initMiniCharts();
-        Tasks.initDashboardWidget();
+//        Index.init();
+//        Index.initChat();
+//        Index.initMiniCharts();
+//        Tasks.initDashboardWidget();
         TableManaged.init();
         //TableEditable.init();
     });
