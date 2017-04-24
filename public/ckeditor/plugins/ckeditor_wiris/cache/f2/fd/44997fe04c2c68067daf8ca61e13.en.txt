@@ -1,0 +1,1 @@
+open curly brackets table row cell x equals 0 end cell row cell y equals negative 1 minus t end cell row cell z equals 0 end cell end table close

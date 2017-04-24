@@ -113,15 +113,12 @@ if (isset($_SESSION['token'])) {
                             $message = "Đã xảy ra lỗi, vui lòng kiểm tra lại";
                             echo "<script type='text/javascript'>showMessage('$message');</script>;";
                         }
-                    } else {
-                        if ($_POST['txtName'] == null || trim($_POST['txtName']) == "") {
-                            $message = "Tên chuyên đề không được để trống";
+                    }else{
+                        if($_POST['txtName']==null || trim($_POST['txtName']) == ""){
+                            $message = "Tên chuyên đề không được để trông";
                             echo "<script type='text/javascript'>showMessage('$message');</script>;";
                         }
                     }
-                } else {
-                    $message = "Đã xảy ra lỗi, vui lòng kiểm tra lại";
-                    echo "<script type='text/javascript'>showMessage('$message');</script>;";
                 }
 
             }

@@ -1,1 +1,0 @@
-log subscript 6 45 space equals space fraction numerator a plus 2 a b over denominator a b end fraction

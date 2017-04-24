@@ -1,1 +1,0 @@
-log subscript 2 open parentheses fraction numerator 2 a cubed over denominator b end fraction close parentheses equals 1 plus 3 log subscript 2 open parentheses a close parentheses minus log subscript 2 open parentheses b close parentheses

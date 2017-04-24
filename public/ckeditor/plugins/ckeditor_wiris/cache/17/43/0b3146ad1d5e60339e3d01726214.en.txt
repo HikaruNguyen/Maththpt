@@ -1,1 +1,0 @@
-fraction numerator 1 over denominator 1 plus square root of x plus 1 end root end fraction

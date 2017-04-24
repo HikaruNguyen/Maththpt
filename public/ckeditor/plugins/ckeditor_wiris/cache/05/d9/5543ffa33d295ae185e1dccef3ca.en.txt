@@ -1,0 +1,1 @@
+fraction numerator 32 straight pi over denominator 5 end fraction

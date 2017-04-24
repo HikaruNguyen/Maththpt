@@ -1,0 +1,1 @@
+open square brackets table attributes columnalign left end attributes row cell m greater or equal than 1 end cell row cell m less or equal than negative 15 end cell end table close

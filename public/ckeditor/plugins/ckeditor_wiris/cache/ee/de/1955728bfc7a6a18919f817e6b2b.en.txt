@@ -1,0 +1,1 @@
+integral f left parenthesis x right parenthesis d x equals 4 x cubed minus 3 x squared plus 2 x plus C

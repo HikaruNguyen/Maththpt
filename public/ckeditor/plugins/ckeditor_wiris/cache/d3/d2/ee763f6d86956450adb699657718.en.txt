@@ -1,1 +1,0 @@
-integral subscript 3 superscript 4 fraction numerator d x over denominator x squared plus x end fraction equals a ln 2 space plus space b ln 3 plus c ln 5

@@ -1,0 +1,1 @@
+integral subscript 1 superscript e x ln open parentheses x close parentheses d x

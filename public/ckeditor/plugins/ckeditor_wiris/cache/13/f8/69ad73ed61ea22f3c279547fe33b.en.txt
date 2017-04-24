@@ -1,0 +1,1 @@
+integral sin x d x equals cos x plus C

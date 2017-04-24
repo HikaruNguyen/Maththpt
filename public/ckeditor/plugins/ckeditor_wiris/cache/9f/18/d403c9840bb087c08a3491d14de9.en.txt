@@ -1,0 +1,1 @@
+fraction numerator left parenthesis b squared plus c squared minus a squared right parenthesis left parenthesis c squared plus a squared minus b squared right parenthesis left parenthesis a squared plus b squared minus c squared right parenthesis over denominator 8 end fraction

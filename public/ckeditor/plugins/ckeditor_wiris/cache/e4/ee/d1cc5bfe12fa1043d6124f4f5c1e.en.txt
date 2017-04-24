@@ -1,1 +1,0 @@
-integral f left parenthesis x right parenthesis d x space equals space minus 1 third square root of 2 x minus 1 end root space plus space C

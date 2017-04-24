@@ -1,0 +1,1 @@
+log x equals 1 half log 3 a minus 2 log b plus 3 log square root of c

@@ -1,1 +1,0 @@
-fraction numerator 13 to the power of x over denominator ln 13 end fraction

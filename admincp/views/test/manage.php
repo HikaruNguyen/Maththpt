@@ -117,38 +117,36 @@ if (isset($_SESSION['token'])) {
 
 
         <?php
-
-        include '../includes/footer.php';
-
-        ?>
-        <script>
-            document.getElementById("Menu_BoDe").className = "active open";
-        </script>
-        <?php
-        if (!empty($_POST)) {
-            ob_start();
-
-            if ($type != null && trim($type) != "") {
-                if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtName']) && isset($_POST['txtAuthor'])) {
-
-                    if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtName'] != null && trim($_POST['txtName']) != ""
-                        && $_POST['txtAuthor'] != null && trim($_POST['txtAuthor'])
-                    ) {
-                        $result = 0;
-                        $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor'], $_POST['activated']);
-//            var_dump("result " . $result);
-                        if ($result == 1) {
-//                    header('location:../test');
-                            echo "<script>history.go(-2);</script>";
-                        }
-                    }
-                }
-
-            }
-            ob_end_flush();
-        }
     }
+    include '../includes/footer.php';
 } else {
     header('location:../../login.php');
+}
+?>
+    <script>
+        document.getElementById("Menu_BoDe").className = "active open";
+    </script>
+<?php
+if (!empty($_POST)) {
+    ob_start();
+
+    if ($type != null && trim($type) != "") {
+        if ((isset($_POST['txtID']) || $type == 'add') && isset($_POST['txtName']) && isset($_POST['txtAuthor'])) {
+
+            if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtName'] != null && trim($_POST['txtName']) != ""
+                && $_POST['txtAuthor'] != null && trim($_POST['txtAuthor'])
+            ) {
+                $result = 0;
+                $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor'], $_POST['activated']);
+//            var_dump("result " . $result);
+                if ($result == 1) {
+//                    header('location:../test');
+                    echo "<script>history.go(-2);</script>";
+                }
+            }
+        }
+
+    }
+    ob_end_flush();
 }
 ?>
