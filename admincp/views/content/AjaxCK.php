@@ -17,10 +17,10 @@ if (isset($data)) {
     require_once('../../utils/CRUDUtils.php');
     if (isset($data['id'])) {
         $result = CRUDUtils::manageContent($action, $data['id'], $data['testID'], $data['cateID'], $data['question'], $data['image'],
-            $data['answerA'], $data['answerB'], $data['answerC'], $data['answerD'], $data['answerTrue']);
+            $data['answerA'], $data['answerB'], $data['answerC'], $data['answerD'], $data['answerTrue'], $data['answerDetail']);
     } else {
         $result = CRUDUtils::manageContent($action, null, $data['testID'], $data['cateID'], $data['question'], $data['image'],
-            $data['answerA'], $data['answerB'], $data['answerC'], $data['answerD'], $data['answerTrue']);
+            $data['answerA'], $data['answerB'], $data['answerC'], $data['answerD'], $data['answerTrue'], $data['answerDetail']);
     }
 
     if ($result == 1) {

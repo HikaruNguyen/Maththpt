@@ -21,6 +21,7 @@ if (isset($_SESSION['token'])) {
         $length = strlen($needle);
         return (substr($haystack, 0, $length) === $needle);
     }
+
     if (isset($_GET['type'])) {
         $type = $_GET['type'];
         $idContent = "";
@@ -29,6 +30,7 @@ if (isset($_SESSION['token'])) {
         $answerB = "";
         $answerC = "";
         $answerD = "";
+        $answerDetail = "";
         $answerTrue = 0;
         $cateID = 0;
         $testID = 0;
@@ -36,7 +38,6 @@ if (isset($_SESSION['token'])) {
         if ($type == 'edit' || $type == 'delete') {
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
-                var_dump($id);
                 $con = array("id" => $id);
                 $data = $db->get_by_conditions("tbl_content", $con);
                 if (count($data) > 0) {
@@ -50,6 +51,7 @@ if (isset($_SESSION['token'])) {
                     $answerTrue = (int)$data[0]['answerTrue'];
                     $cateID = (int)$data[0]['cateID'];
                     $testID = (int)$data[0]['testID'];
+                    $answerDetail = $data[0]['answerDetail'];
                 }
             }
         }
@@ -61,6 +63,7 @@ if (isset($_SESSION['token'])) {
                 var answer2 = CKEDITOR.instances.editorAnswer2.getData().replace("<p>", "").replace("</p>", "");
                 var answer3 = CKEDITOR.instances.editorAnswer3.getData().replace("<p>", "").replace("</p>", "");
                 var answer4 = CKEDITOR.instances.editorAnswer4.getData().replace("<p>", "").replace("</p>", "");
+                var answerDetail = CKEDITOR.instances.editorAnswerDetail.getData().replace("<p>", "").replace("</p>", "");
                 var answerTrue = $("#answer").val();
                 var cateID = $("#category").val();
                 var testID = $("#test").val();
@@ -86,6 +89,7 @@ if (isset($_SESSION['token'])) {
                         "answerC": answer3,
                         "answerD": answer4,
                         "answerTrue": answerTrue,
+                        "answerDetail": answerDetail,
                         "cateID": cateID,
                         "testID": testID
                     },
@@ -199,6 +203,13 @@ if (isset($_SESSION['token'])) {
                             </script>
                         </div>
                         <div class="form-group">
+                            <b>Đáp án chi tiết</b><br>
+                            <textarea name="editorAnswerDetail" id="editorAnswerDetail" rows="10" cols="80"></textarea>
+                            <script>
+                                CKEDITOR.replace('editorAnswerDetail');
+                            </script>
+                        </div>
+                        <div class="form-group">
                             Đáp án đúng
                             (*)
                             <select class="form-control" name="answer" id="answer">
@@ -297,6 +308,7 @@ if (isset($_SESSION['token'])) {
             var answerB = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerB)))?>;
             var answerC = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerC)))?>;
             var answerD = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerD)))?>;
+            var answerDetail = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerDetail)))?>;
             CKEDITOR.on('instanceReady', function (evt) {
                 if (CKEDITOR.instances.editorQuestion.mode == 'wysiwyg') {
                     CKEDITOR.instances.editorQuestion.setMode('source');
@@ -330,9 +342,14 @@ if (isset($_SESSION['token'])) {
                 if (CKEDITOR.instances.editorAnswer4.mode == 'wysiwyg') {
                     CKEDITOR.instances.editorAnswer4.setMode('source');
                     CKEDITOR.instances.editorAnswer4.setData(answerD);
-//                                        CKEDITOR.instances.editorQuestion.setMode('wysiwyg');
                 } else {
                     CKEDITOR.instances.editorAnswer4.setData(answerD);
+                }
+                if (CKEDITOR.instances.editorAnswerDetail.mode == 'wysiwyg') {
+                    CKEDITOR.instances.editorAnswerDetail.setMode('source');
+                    CKEDITOR.instances.editorAnswerDetail.setData(answerDetail);
+                } else {
+                    CKEDITOR.instances.editorAnswerDetail.setData(answerDetail);
                 }
             })
             ;
@@ -372,7 +389,6 @@ if (isset($_SESSION['token'])) {
             ob_start();
             ob_end_flush();
         }
-       
 
 
     }

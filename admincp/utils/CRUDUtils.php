@@ -78,12 +78,12 @@ class CRUDUtils
         return 0;
     }
 
-    public static function manageContent($type, $id, $testID, $cateID, $question, $image, $answerA, $answerB, $answerC, $answerD, $answerTrue)
+    public static function manageContent($type, $id, $testID, $cateID, $question, $image, $answerA, $answerB, $answerC, $answerD, $answerTrue, $answerDetail)
     {
         $db = new DB_ADAPTER();
         if ($type == 'edit') {
             $object = array("testID" => $testID, "cateID" => $cateID, "question" => $question, "image" => $image,
-                "answerA" => $answerA, "answerB" => $answerB, "answerC" => $answerC, "answerD" => $answerD, "answerTrue" => $answerTrue);
+                "answerA" => $answerA, "answerB" => $answerB, "answerC" => $answerC, "answerD" => $answerD, "answerTrue" => $answerTrue, "answerDetail" => $answerDetail);
             $condistion = array("id" => $id);
             $result = $db->update(CRUDUtils::$DB_CONTAIN, $object, $condistion);
             if ($result == true) {
