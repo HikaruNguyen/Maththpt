@@ -1,1 +1,0 @@
-integral subscript straight a superscript straight b open vertical bar straight f left parenthesis straight x right parenthesis close vertical bar d straight x

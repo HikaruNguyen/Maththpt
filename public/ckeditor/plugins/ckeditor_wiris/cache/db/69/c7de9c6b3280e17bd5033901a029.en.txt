@@ -1,1 +1,0 @@
-limit as x rightwards arrow plus infinity of f left parenthesis x right parenthesis equals 1

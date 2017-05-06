@@ -1,1 +1,0 @@
-fraction numerator A M over denominator B M end fraction equals 1 half

@@ -1,0 +1,1 @@
+fraction numerator x plus 1 over denominator x squared plus 2 x minus 3 end fraction

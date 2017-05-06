@@ -1,0 +1,1 @@
+fraction numerator a x plus b over denominator c x plus d end fraction

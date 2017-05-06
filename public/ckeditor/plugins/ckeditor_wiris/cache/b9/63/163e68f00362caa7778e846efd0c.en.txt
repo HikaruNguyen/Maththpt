@@ -1,0 +1,1 @@
+open curly brackets table row cell x equals 2 plus t end cell row cell y equals 1 minus t end cell row cell z equals 2 t end cell end table close

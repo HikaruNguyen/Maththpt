@@ -1,1 +1,0 @@
-fraction numerator 100 x 1 comma 03 over denominator 3 end fraction

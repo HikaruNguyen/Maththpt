@@ -1,0 +1,1 @@
+open vertical bar z squared minus 2 z plus 5 close vertical bar equals open vertical bar left parenthesis z minus 1 plus 2 i right parenthesis left parenthesis z plus 3 i minus 1 right parenthesis close vertical bar

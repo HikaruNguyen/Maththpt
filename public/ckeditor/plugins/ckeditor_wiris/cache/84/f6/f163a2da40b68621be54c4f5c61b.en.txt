@@ -1,0 +1,1 @@
+ln left parenthesis a comma b right parenthesis equals left parenthesis ln a right parenthesis. left parenthesis ln b right parenthesis

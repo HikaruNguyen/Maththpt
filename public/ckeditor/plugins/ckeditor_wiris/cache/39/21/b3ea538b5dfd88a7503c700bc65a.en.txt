@@ -1,0 +1,1 @@
+f left parenthesis x right parenthesis equals fraction numerator 1 over denominator square root of x squared minus 2 x minus square root of x squared minus x end root end root end fraction

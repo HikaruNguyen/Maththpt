@@ -16,6 +16,12 @@ if (isset($_SESSION['token'])) {
     include '../includes/header.php';
     $delImg = 0;
     $db = new DB_ADAPTER();
+    function startsWith($haystack, $needle)
+    {
+        $length = strlen($needle);
+        return (substr($haystack, 0, $length) === $needle);
+    }
+
     if (isset($_GET['type'])) {
         $type = $_GET['type'];
         $idContent = "";
@@ -24,6 +30,7 @@ if (isset($_SESSION['token'])) {
         $answerB = "";
         $answerC = "";
         $answerD = "";
+        $answerDetail = "";
         $answerTrue = 0;
         $cateID = 0;
         $testID = 0;
@@ -31,7 +38,6 @@ if (isset($_SESSION['token'])) {
         if ($type == 'edit' || $type == 'delete') {
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
-                var_dump($id);
                 $con = array("id" => $id);
                 $data = $db->get_by_conditions("tbl_content", $con);
                 if (count($data) > 0) {
@@ -45,6 +51,7 @@ if (isset($_SESSION['token'])) {
                     $answerTrue = (int)$data[0]['answerTrue'];
                     $cateID = (int)$data[0]['cateID'];
                     $testID = (int)$data[0]['testID'];
+                    $answerDetail = $data[0]['answerDetail'];
                 }
             }
         }
@@ -56,6 +63,7 @@ if (isset($_SESSION['token'])) {
                 var answer2 = CKEDITOR.instances.editorAnswer2.getData().replace("<p>", "").replace("</p>", "");
                 var answer3 = CKEDITOR.instances.editorAnswer3.getData().replace("<p>", "").replace("</p>", "");
                 var answer4 = CKEDITOR.instances.editorAnswer4.getData().replace("<p>", "").replace("</p>", "");
+                var answerDetail = CKEDITOR.instances.editorAnswerDetail.getData().replace("<p>", "").replace("</p>", "");
                 var answerTrue = $("#answer").val();
                 var cateID = $("#category").val();
                 var testID = $("#test").val();
@@ -81,13 +89,15 @@ if (isset($_SESSION['token'])) {
                         "answerC": answer3,
                         "answerD": answer4,
                         "answerTrue": answerTrue,
+                        "answerDetail": answerDetail,
                         "cateID": cateID,
                         "testID": testID
                     },
                     success: function (data) {
                         //                        data = true / false;
                         if (data == '1') {
-                            window.location.href = 'index.php';
+//                            window.location.href = 'index.php';
+                            history.go(-1);
                         } else {
 
                         }
@@ -144,7 +154,8 @@ if (isset($_SESSION['token'])) {
 
                             <img id="thumb" src="<?php echo $imageQuestion ?>" height="200" alt="Image preview..."
                                 <?php
-                                if (!isset($imageQuestion) || $imageQuestion == null || trim($imageQuestion) == "") {
+
+                                if (!isset($imageQuestion) || $imageQuestion == null || trim($imageQuestion) == "" || !startsWith($imageQuestion, 'data:image')) {
                                     echo " style=\" display: none; \"";
                                 }
                                 ?>
@@ -192,6 +203,13 @@ if (isset($_SESSION['token'])) {
                             </script>
                         </div>
                         <div class="form-group">
+                            <b>Đáp án chi tiết</b><br>
+                            <textarea name="editorAnswerDetail" id="editorAnswerDetail" rows="10" cols="80"></textarea>
+                            <script>
+                                CKEDITOR.replace('editorAnswerDetail');
+                            </script>
+                        </div>
+                        <div class="form-group">
                             Đáp án đúng
                             (*)
                             <select class="form-control" name="answer" id="answer">
@@ -221,7 +239,7 @@ if (isset($_SESSION['token'])) {
                                 </option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" style="display: inline-block">
                             Chuyên đề
                             (*)
                             <select class="form-control" name="category" id="category">
@@ -250,7 +268,7 @@ if (isset($_SESSION['token'])) {
                                 <?php
                                 $dataBoDe = $db->get_all_record("tbl_test");
                                 if (count($dataBoDe) > 0) {
-                                    for ($i = count($dataBoDe)-1; $i >= 0; $i--) {
+                                    for ($i = count($dataBoDe) - 1; $i >= 0; $i--) {
 //                                        $op = "<option value='$dataCate[$i]['id']'";
                                         $op = "<option value='";
                                         $op = $op . $dataBoDe[$i]['id'];
@@ -290,6 +308,7 @@ if (isset($_SESSION['token'])) {
             var answerB = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerB)))?>;
             var answerC = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerC)))?>;
             var answerD = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerD)))?>;
+            var answerDetail = <?php echo json_encode(str_replace("&nbsp;", " ", str_replace("xmlns=\"http://www.w3.org/1998/Math/MathML\"", "", $answerDetail)))?>;
             CKEDITOR.on('instanceReady', function (evt) {
                 if (CKEDITOR.instances.editorQuestion.mode == 'wysiwyg') {
                     CKEDITOR.instances.editorQuestion.setMode('source');
@@ -323,69 +342,58 @@ if (isset($_SESSION['token'])) {
                 if (CKEDITOR.instances.editorAnswer4.mode == 'wysiwyg') {
                     CKEDITOR.instances.editorAnswer4.setMode('source');
                     CKEDITOR.instances.editorAnswer4.setData(answerD);
-//                                        CKEDITOR.instances.editorQuestion.setMode('wysiwyg');
                 } else {
                     CKEDITOR.instances.editorAnswer4.setData(answerD);
+                }
+                if (CKEDITOR.instances.editorAnswerDetail.mode == 'wysiwyg') {
+                    CKEDITOR.instances.editorAnswerDetail.setMode('source');
+                    CKEDITOR.instances.editorAnswerDetail.setData(answerDetail);
+                } else {
+                    CKEDITOR.instances.editorAnswerDetail.setData(answerDetail);
                 }
             })
             ;
         </script>
         <?php
 
-    }
-    include '../includes/footer.php';
-} else {
-    header('location:../../login.php');
-}
-?>
-<script>
-    document.getElementById("Menu_Contain").className = "active open";
-    function previewFile() {
-        var preview = document.getElementById("thumb");
-        preview.style.display = "";
-        document.getElementById("delImg").style.display = "";
-        var file = document.getElementById("uploadimg").files[0];
-        var reader = new FileReader();
 
-        reader.addEventListener("load", function () {
-            preview.src = reader.result;
-        }, false);
+        include '../includes/footer.php';
 
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    }
-    function deleteImage() {
-        document.getElementById('thumb').removeAttribute("src");
-        document.getElementById('thumb').style.display = "none";
-        document.getElementById('delImg').style.display = "none";
-    }
-</script>
-<?php
-if (!empty($_POST)) {
-    var_dump($type . " " . $_POST['editorQuestion'] . " " . $_POST['editorQuestion']);
-    ob_start();
-    /*if ($type != null && trim($type) != "") {
-        if ((isset($_POST['txtID']) || $type == 'add')
-            && isset($_POST['editorQuestion']) && isset($_POST['editorAnswer1'])
-            && isset($_POST['editorAnswer2']) && isset($_POST['editorAnswer3'])
-            && isset($_POST['editorAnswer3']) && isset($_POST['editorAnswer4']) && ($_POST['answer'])
-        ) {
+        ?>
+        <script>
+            document.getElementById("Menu_Contain").className = "active open";
+            function previewFile() {
+                var preview = document.getElementById("thumb");
+                preview.style.display = "";
+                document.getElementById("delImg").style.display = "";
+                var file = document.getElementById("uploadimg").files[0];
+                var reader = new FileReader();
 
-            if ((($_POST['txtID'] != null && trim($_POST['txtID']) != "") || $type == 'add') && $_POST['txtName'] != null && trim($_POST['txtName']) != ""
-                && $_POST['txtAuthor'] != null && trim($_POST['txtAuthor'])
-            ) {
-                $result = 0;
-                $result = CRUDUtils::manageBoDe($type, $_POST['txtID'], $_POST['txtName'], $_POST['txtAuthor']);
-    //            var_dump("result " . $result);
-                if ($result == 1) {
-                    header('location:../test');
+                reader.addEventListener("load", function () {
+                    preview.src = reader.result;
+                }, false);
+
+                if (file) {
+                    reader.readAsDataURL(file);
                 }
             }
+            function deleteImage() {
+                document.getElementById('thumb').removeAttribute("src");
+                document.getElementById('thumb').style.display = "none";
+                document.getElementById('delImg').style.display = "none";
+            }
+        </script>
+        <?php
+        if (!empty($_POST)) {
+            var_dump($type . " " . $_POST['editorQuestion'] . " " . $_POST['editorQuestion']);
+            ob_start();
+            ob_end_flush();
         }
 
-    }*/
-    ob_end_flush();
+
+    }
+} else {
+    header('location:../../login.php');
 }
 ?>
 

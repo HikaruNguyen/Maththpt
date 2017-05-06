@@ -1,0 +1,1 @@
+ln a over b equals ln b minus ln a

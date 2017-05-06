@@ -78,9 +78,30 @@ if (isset($_SESSION['token'])) {
                                    value="<?php echo $fullName ?>">
                         </div>
                         <div class="form-group">
-                            Email người dùng
+                            Email quản trị viên
                             (*)
                             <input id="txtEmail" name="txtEmail" class="form-control" value="<?php echo $email ?>">
+                        </div>
+                        <div class="form-group">
+                            Vai trò
+                            (*)
+                            <select class="form-control" name="txtType" id="activated">
+                                <option value="1"
+                                    <?php
+                                    if ($typeUser == 1) {
+                                        echo " Selected='selected'";
+                                    }
+                                    ?>
+                                >Admin
+                                </option>
+                                <option value="2"
+                                    <?php
+                                    if ($typeUser == 2) {
+                                        echo " Selected='selected'";
+                                    }
+                                    ?>>Editor
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-actions right">
@@ -127,10 +148,11 @@ if (!empty($_POST)) {
 
             ) {
                 $result = 0;
-                $result = CRUDUtils::manageManager($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail']);
+                $result = CRUDUtils::manageManager($type, $_POST['txtID'], $_POST['txtUserName'], $_POST['txtFullName'], $_POST['txtEmail'], $_POST['txtType']);
 //            var_dump("result " . $result);
                 if ($result == 1) {
-                    header('location:../manager');
+//                    header('location:../manager');
+                    echo "<script>history.go(-2);</script>";
                 }
             }
         }

@@ -1,0 +1,1 @@
+integral subscript a superscript b f left parenthesis x right parenthesis d x space equals space integral subscript a superscript b f left parenthesis y right parenthesis d y

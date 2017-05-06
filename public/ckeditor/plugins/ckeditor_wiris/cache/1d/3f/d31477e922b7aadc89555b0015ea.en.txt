@@ -1,1 +1,0 @@
-fraction numerator 2 x minus 1 minus square root of x squared plus x plus 3 end root over denominator x squared minus 5 x plus 6 end fraction

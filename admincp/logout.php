@@ -7,5 +7,7 @@
  */
 session_start();
 unset($_SESSION['username']);
+unset($_SESSION['token']);
+unset($_SESSION['typeUser']);
 header('location: login.php');
 ?>

@@ -1,0 +1,1 @@
+log subscript 1 half end subscript left parenthesis 2 x minus 1 right parenthesis greater or equal than log subscript 1 half end subscript left parenthesis 5 minus x right parenthesis

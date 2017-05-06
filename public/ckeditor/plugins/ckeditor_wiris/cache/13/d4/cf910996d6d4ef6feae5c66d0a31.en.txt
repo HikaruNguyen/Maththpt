@@ -1,0 +1,1 @@
+open curly brackets table row cell x equals 2 t end cell row cell y equals 7 minus 3 t end cell row cell z equals t end cell end table close

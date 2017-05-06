@@ -72,6 +72,10 @@ if (isset($_SESSION['token'])) {
                                 </th>
                                 <th>Email
                                 </th>
+                                <th>Vai trò
+                                </th>
+                                <th>Khôi phục MK
+                                </th>
                                 <th>Sửa
                                 </th>
                                 <th>Xóa
@@ -88,6 +92,12 @@ if (isset($_SESSION['token'])) {
                                     $row_table = $row_table . "<td> " . $result[$i]['username'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['fullname'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['email'] . "</td> ";
+                                    if ($result[$i]['type'] == 1) {
+                                        $row_table = $row_table . "<td>Admin</td> ";
+                                    } else if ($result[$i]['type'] == 2) {
+                                        $row_table = $row_table . "<td>Editor</td> ";
+                                    }
+                                    $row_table = $row_table . "<td> <a  href = 'reset_password.php?id=" . $result[$i]['id'] . "' > Khôi phục</a> </td> ";
                                     $row_table = $row_table . "<td> " . "<a class='edit' href = 'manage.php?type=edit&id=" . $result[$i]['id'] . "' > Sửa</a> " . "</td> ";
                                     $row_table = $row_table . "<td> " . "<a class='delete' href = 'manage.php?type=delete&id=" . $result[$i]['id'] . "' > Xóa</a> " . "</td> ";
                                     $row_table = $row_table . "</tr> ";

@@ -1,0 +1,1 @@
+log subscript 3 open parentheses 1 minus x squared close parentheses plus log subscript 1 third end subscript open parentheses x plus m minus 5 close parentheses equals 0

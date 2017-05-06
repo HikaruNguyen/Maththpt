@@ -1,1 +1,0 @@
-fraction numerator 3 a over denominator 4 end fraction

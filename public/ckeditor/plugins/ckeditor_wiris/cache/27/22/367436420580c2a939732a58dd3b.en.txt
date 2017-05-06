@@ -1,0 +1,1 @@
+integral subscript 2 superscript 3 fraction numerator x squared minus 3 x plus 2 over denominator x squared minus x plus 1 end fraction d x equals a ln 7 plus b ln 3 plus c

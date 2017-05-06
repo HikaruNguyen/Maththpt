@@ -1,0 +1,1 @@
+d colon open curly brackets table row cell x equals t end cell row cell y equals negative 1 end cell row cell z equals negative t end cell end table close

@@ -1,1 +1,0 @@
-ln a over b equals fraction numerator ln left parenthesis a right parenthesis over denominator ln left parenthesis b right parenthesis end fraction

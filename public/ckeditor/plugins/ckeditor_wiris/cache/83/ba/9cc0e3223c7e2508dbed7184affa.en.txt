@@ -1,0 +1,1 @@
+integral subscript a superscript a f left parenthesis x right parenthesis d x equals 0

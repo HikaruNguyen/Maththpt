@@ -1,0 +1,1 @@
+a to the power of c space equals space b to the power of d space left right double arrow fraction numerator ln left parenthesis a right parenthesis over denominator ln left parenthesis b right parenthesis end fraction equals d over c
