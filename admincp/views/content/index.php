@@ -220,23 +220,77 @@ ON tbl_content.testID = tbl_test.id";
                                 <?php
                                 if ($page > 0) {
                                     $pre_page = $page - 1;
-                                    echo "<li class='paginate_button previous' aria-controls=\"sample_2\" tabindex=\"0\"
-                                id='sample_2_previous'><a href='" . hrefFilter($per_page, $con) . "'><i class='fa fa-angle-left'></i></a></li>";
+                                    echo "<li class='paginate_button previous' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a href='" . hrefFilter($pre_page, $con) . "'>" . "<" . "</a></li>";
                                 }
+                                if ($total_page <= 10) {
+                                    for ($i = 0; $i < $total_page; $i++) {
 
-                                for ($i = 0; $i < $total_page; $i++) {
+                                        $li = "<li class='paginate_button ";
+                                        if ($i == $page) {
+                                            $li = $li . "active";
+                                        }
+                                        $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i, $con) . "'>{$i}</a></li>";
+                                        echo $li;
+                                    }
+                                } else {
+                                    //Page 0
                                     $li = "<li class='paginate_button ";
-                                    if ($i == $page) {
+                                    if (0 == $page) {
                                         $li = $li . "active";
                                     }
-                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i, $con) . "'>{$i}</a></li>";
+                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter(0, $con) . "'>1</a></li>";
+                                    echo $li;
+
+                                    if ($page - 2 > 1) {
+                                        echo "<li class='disabled ng-scope' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a>...</a></li>";
+                                        if ($page + 3 < $total_page-1) {
+                                            for ($i = $page - 2; $i <= $page + 2; $i++) {
+                                                $li = "<li class='paginate_button ";
+                                                if ($i == $page) {
+                                                    $li = $li . "active";
+                                                }
+                                                $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i, $con) . "'>" . ($i + 1) . "</a></li>";
+                                                echo $li;
+                                            }
+                                            echo "<li class='disabled ng-scope' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a>...</a></li>";
+                                        } else {
+                                            for ($i = round($total_page) - 5; $i < $total_page - 1; $i++) {
+                                                $li = "<li class='paginate_button ";
+                                                if ($i == $page) {
+                                                    $li = $li . "active";
+                                                }
+                                                $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i, $con) . "'>" . ($i + 1) . "</a></li>";
+                                                echo $li;
+                                            }
+                                        }
+
+                                    } else {
+                                        for ($i = 1; $i < 7; $i++) {
+                                            $li = "<li class='paginate_button ";
+                                            if ($i == $page) {
+                                                $li = $li . "active";
+                                            }
+                                            $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i, $con) . "'>" . ($i + 1) . "</a></li>";
+                                            echo $li;
+                                        }
+                                        echo "<li class='disabled ng-scope' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a>...</a></li>";
+                                    }
+                                    //Page End $total_page
+                                    $li = "<li class='paginate_button ";
+                                    if (round($total_page) == $page) {
+                                        $li = $li . "active";
+                                    }
+                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter(round($total_page), $con) . "'>" . round($total_page + 1) . "</a></li>";
                                     echo $li;
                                 }
-
                                 if ($page <= $total_page - 1) {
                                     $next_page = $page + 1;
                                     echo " <li class='paginate_button next' aria-controls='sample_2' tabindex='0' id='sample_2_next'><a
-                                    href='" . hrefFilter($next_page, $con) . "'><i class='fa fa-angle-right'></i></a></li>";
+                                    href='" . hrefFilter($next_page, $con) . "'>" . ">" . "</a></li>";
                                 }
                                 ?>
                             </ul>

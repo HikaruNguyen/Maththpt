@@ -1,0 +1,1 @@
+ln left parenthesis a b right parenthesis equals ln a. ln b

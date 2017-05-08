@@ -1,0 +1,1 @@
+increment colon open curly brackets table row cell x equals 5 plus t end cell row cell y equals 3 plus 2 t end cell row cell z equals 3 minus t end cell end table close

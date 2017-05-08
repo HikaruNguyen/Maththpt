@@ -1,0 +1,1 @@
+stack D C with rightwards arrow on top equals 2 stack A B with rightwards arrow on top

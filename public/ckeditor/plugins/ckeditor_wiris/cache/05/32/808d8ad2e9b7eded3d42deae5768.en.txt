@@ -1,0 +1,1 @@
+V subscript S. A M C end subscript over V subscript S. A B C end subscript equals fraction numerator S A over denominator S A end fraction. fraction numerator S M over denominator S B end fraction. fraction numerator S C over denominator S C end fraction equals 1 half

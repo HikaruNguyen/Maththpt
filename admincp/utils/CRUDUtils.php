@@ -13,6 +13,7 @@ class CRUDUtils
     public static $DB_CONTAIN = "tbl_content";
     public static $DB_USER = "user";
     public static $DB_MANAGER = "tbl_manager";
+    public static $DB_HISTORY = "tbl_history";
 
     public static function manageChuyenDe($type, $id, $name)
     {
@@ -93,7 +94,7 @@ class CRUDUtils
             }
         } else if ($type == 'add') {
             $object = array("testID" => $testID, "cateID" => $cateID, "question" => $question, "image" => $image,
-                "answerA" => $answerA, "answerB" => $answerB, "answerC" => $answerC, "answerD" => $answerD, "answerTrue" => $answerTrue);
+                "answerA" => $answerA, "answerB" => $answerB, "answerC" => $answerC, "answerD" => $answerD, "answerTrue" => $answerTrue,"answerDetail" => $answerDetail);
             $result = $db->insert_to_database(CRUDUtils::$DB_CONTAIN, $object);
             if ($result == true) {
                 return 1;

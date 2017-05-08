@@ -1,0 +1,1 @@
+stack A apostrophe A with rightwards arrow on top plus stack B apostrophe B with rightwards arrow on top plus stack C apostrophe C with rightwards arrow on top equals 0 with rightwards arrow on top

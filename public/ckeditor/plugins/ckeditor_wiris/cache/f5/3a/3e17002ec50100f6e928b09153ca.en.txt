@@ -1,0 +1,1 @@
+integral subscript 0 superscript straight pi over 4 end superscript left parenthesis 1 plus x right parenthesis cos 2 x d x equals 1 over a plus straight pi over b

@@ -1,0 +1,1 @@
+d subscript 3 colon open curly brackets table row cell x equals 1 end cell row cell y equals 0 end cell row cell z equals t subscript 3 end cell end table close

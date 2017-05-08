@@ -1,0 +1,1 @@
+integral left parenthesis x squared plus 1 right parenthesis squared d x equals 2 left parenthesis x squared plus 1 right parenthesis C

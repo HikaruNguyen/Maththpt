@@ -1,0 +1,1 @@
+stack D C with rightwards arrow on top equals left parenthesis a plus 1 semicolon b minus 3 semicolon c minus 2 right parenthesis

@@ -1,0 +1,1 @@
+open curly brackets table attributes columnalign left end attributes row cell m greater than 0 end cell row cell 0 less or equal than m less or equal than 1 end cell end table close

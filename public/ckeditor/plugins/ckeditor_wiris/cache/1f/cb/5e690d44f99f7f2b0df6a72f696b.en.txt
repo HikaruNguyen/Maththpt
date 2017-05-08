@@ -1,0 +1,1 @@
+d colon open curly brackets table row cell x equals 1 plus 2 t end cell row cell y equals 2 plus left parenthesis m minus 1 right parenthesis t end cell row cell z equals 3 minus t end cell end table close

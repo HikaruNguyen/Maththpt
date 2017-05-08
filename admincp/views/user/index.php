@@ -71,6 +71,10 @@ if (isset($_SESSION['token'])) {
                                 </th>
                                 <th>Email
                                 </th>
+                                <th>Loại người dùng
+                                </th>
+                                <th>Xem lịch sử
+                                </th>
                                 <th>Sửa
                                 </th>
                                 <th>Xóa
@@ -87,6 +91,12 @@ if (isset($_SESSION['token'])) {
                                     $row_table = $row_table . "<td> " . $result[$i]['username'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['fullname'] . "</td> ";
                                     $row_table = $row_table . "<td> " . $result[$i]['email'] . "</td> ";
+                                    if ($result[$i]['type'] == 1) {
+                                        $row_table = $row_table . "<td>Facebook</td> ";
+                                    } else if ($result[$i]['type'] == 2) {
+                                        $row_table = $row_table . "<td>Bình thường</td> ";
+                                    }
+                                    $row_table = $row_table . "<td> " . "<a class='edit' href = 'history.php?id=" . $result[$i]['id'] . "' > Xem</a> " . "</td> ";
                                     $row_table = $row_table . "<td> " . "<a class='edit' href = 'manage.php?type=edit&id=" . $result[$i]['id'] . "' > Sửa</a> " . "</td> ";
                                     $row_table = $row_table . "<td> " . "<a class='delete' href = 'manage.php?type=delete&id=" . $result[$i]['id'] . "' > Xóa</a> " . "</td> ";
                                     $row_table = $row_table . "</tr> ";
@@ -103,23 +113,77 @@ if (isset($_SESSION['token'])) {
                                 <?php
                                 if ($page > 0) {
                                     $pre_page = $page - 1;
-                                    echo "<li class='paginate_button previous' aria-controls=\"sample_2\" tabindex=\"0\"
-                                id='sample_2_previous'><a href='" . hrefFilter($per_page) . "'><i class='fa fa-angle-left'></i></a></li>";
+                                    echo "<li class='paginate_button previous' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a href='" . hrefFilter($pre_page) . "'>" . "<" . "</a></li>";
                                 }
+                                if ($total_page <= 10) {
+                                    for ($i = 0; $i < $total_page; $i++) {
 
-                                for ($i = 0; $i < $total_page; $i++) {
+                                        $li = "<li class='paginate_button ";
+                                        if ($i == $page) {
+                                            $li = $li . "active";
+                                        }
+                                        $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i) . "'>{$i}</a></li>";
+                                        echo $li;
+                                    }
+                                } else {
+                                    //Page 0
                                     $li = "<li class='paginate_button ";
-                                    if ($i == $page) {
+                                    if (0 == $page) {
                                         $li = $li . "active";
                                     }
-                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i) . "'>{$i}</a></li>";
+                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter(0) . "'>1</a></li>";
+                                    echo $li;
+
+                                    if ($page - 2 > 1) {
+                                        echo "<li class='disabled ng-scope' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a>...</a></li>";
+                                        if ($page + 3 < $total_page - 1) {
+                                            for ($i = $page - 2; $i <= $page + 2; $i++) {
+                                                $li = "<li class='paginate_button ";
+                                                if ($i == $page) {
+                                                    $li = $li . "active";
+                                                }
+                                                $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i) . "'>" . ($i + 1) . "</a></li>";
+                                                echo $li;
+                                            }
+                                            echo "<li class='disabled ng-scope' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a>...</a></li>";
+                                        } else {
+                                            for ($i = round($total_page) - 5; $i < $total_page - 1; $i++) {
+                                                $li = "<li class='paginate_button ";
+                                                if ($i == $page) {
+                                                    $li = $li . "active";
+                                                }
+                                                $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i) . "'>" . ($i + 1) . "</a></li>";
+                                                echo $li;
+                                            }
+                                        }
+
+                                    } else {
+                                        for ($i = 1; $i < 7; $i++) {
+                                            $li = "<li class='paginate_button ";
+                                            if ($i == $page) {
+                                                $li = $li . "active";
+                                            }
+                                            $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter($i) . "'>" . ($i + 1) . "</a></li>";
+                                            echo $li;
+                                        }
+                                        echo "<li class='disabled ng-scope' aria-controls='sample_2' tabindex='0'
+                                id='sample_2_previous'><a>...</a></li>";
+                                    }
+                                    //Page End $total_page
+                                    $li = "<li class='paginate_button ";
+                                    if (round($total_page) == $page) {
+                                        $li = $li . "active";
+                                    }
+                                    $li = $li . "' aria-controls='sample_2' tabindex='0'><a href='" . hrefFilter(round($total_page)) . "'>" . round($total_page + 1) . "</a></li>";
                                     echo $li;
                                 }
-
                                 if ($page <= $total_page - 1) {
                                     $next_page = $page + 1;
                                     echo " <li class='paginate_button next' aria-controls='sample_2' tabindex='0' id='sample_2_next'><a
-                                    href='" . hrefFilter($next_page) . "'><i class='fa fa-angle-right'></i></a></li>";
+                                    href='" . hrefFilter($next_page) . "'>" . ">" . "</a></li>";
                                 }
                                 ?>
                             </ul>
@@ -136,9 +200,9 @@ if (isset($_SESSION['token'])) {
     header('location:../../login.php');
 }
 ?>
-<script>
-    document.getElementById("Menu_User").className = "active open";
-</script>
+    <script>
+        document.getElementById("Menu_User").className = "active open";
+    </script>
 <?php
 function hrefFilter($page)
 {

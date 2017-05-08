@@ -1,0 +1,1 @@
+integral left parenthesis x squared plus 1 right parenthesis squared d x equals x to the power of 5 over 5 plus fraction numerator 2 x cubed over denominator 3 end fraction plus x

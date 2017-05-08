@@ -24,7 +24,7 @@ if (isset($_SESSION['token'])) {
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
                 $con = array("id" => $id);
-                $data = $db->get_by_conditions("user", $con);
+                $data = $db->get_by_conditions(CRUDUtils::$DB_USER, $con);
                 if (count($data) > 0) {
                     $idUser = $data[0]['id'];
                     $userName = $data[0]['username'];

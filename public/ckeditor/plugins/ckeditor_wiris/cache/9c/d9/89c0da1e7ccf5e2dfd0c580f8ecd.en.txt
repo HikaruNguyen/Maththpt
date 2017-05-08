@@ -1,0 +1,1 @@
+x squared right enclose tan x end enclose subscript 0 superscript a minus 2 integral subscript 0 superscript a x tan x d x

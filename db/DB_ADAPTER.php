@@ -93,6 +93,39 @@ class DB_ADAPTER
 
     }
 
+    function insert_to_database_multiple_rows($tb_name, $listobject)
+    {
+        if ($tb_name != "") {
+            $field_tmp = '';
+            $value_tmp = "";
+            $object0 = $listobject[0];
+            foreach ($object0 as $key => $value) {
+                $field_tmp .= $key . ',';
+//                $value_tmp .= "'" . $value . "',";
+            }
+
+            trim($field_tmp);
+//            trim($value_tmp);
+//            $values = substr($value_tmp, 0, strlen($value_tmp) - 1);
+            $fields = substr($field_tmp, 0, strlen($field_tmp) - 1);
+
+            $sql = "INSERT INTO " . $tb_name . " (" . $fields . ") VALUES ";
+            foreach ($listobject as $object) {
+                $value_tmp = "";
+                foreach ($object as $key => $value) {
+                    $value_tmp .= "'" . $value . "',";
+                }
+                trim($value_tmp);
+                $values = substr($value_tmp, 0, strlen($value_tmp) - 1);
+                $sql .= " (" . $values . "),";
+            }
+            $sql = substr($sql, 0, strlen($sql) - 1);
+            $result = @mysql_query($sql) or die(@mysql_error());
+            return $result;
+        }
+
+    }
+
     function delete($tbl_name, $condistion)
     {
         $condistion_temp = "";

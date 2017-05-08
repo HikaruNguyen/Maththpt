@@ -1,0 +1,1 @@
+S subscript A B C end subscript equals 1 half A B. B C equals a squared

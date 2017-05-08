@@ -1,0 +1,1 @@
+S equals left parenthesis 1 plus square root of 1 minus x squared end root right parenthesis x

@@ -1,0 +1,1 @@
+log subscript b open parentheses square root of 2 plus square root of 5 close parentheses greater than log subscript b open parentheses 2 plus square root of 3 close parentheses

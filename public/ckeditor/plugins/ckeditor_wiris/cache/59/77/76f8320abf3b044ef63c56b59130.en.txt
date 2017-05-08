@@ -1,0 +1,1 @@
+integral f left parenthesis 2 x minus 1 right parenthesis d x equals 2 F left parenthesis x right parenthesis minus 1 plus C

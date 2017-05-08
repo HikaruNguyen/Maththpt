@@ -1,0 +1,1 @@
+open curly brackets table attributes columnalign left end attributes row cell left parenthesis 2 to the power of x.10 to the power of z right parenthesis to the power of y equals 1 end cell row cell left parenthesis 5 to the power of y.10 to the power of z right parenthesis to the power of x equals 1 end cell end table close

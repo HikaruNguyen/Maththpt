@@ -13,11 +13,15 @@ class Utils
     const DB_BODE = "tbl_test";
     const DB_CONTAIN = "tbl_content";
     const DB_USER = "user";
+    const DB_HISTORY = "tbl_history";
     const DB_MANAGER = "tbl_manager";
 
     function checkHeader()
     {
         $header = getallheaders();
+        if(!isset($header) || !isset($header['X-Math-Api-Key'])){
+            return false;
+        }
         if ($header['X-Math-Api-Key'] == self::X_Math_Api_Key) {
             return true;
         } else {

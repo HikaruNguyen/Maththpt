@@ -1,0 +1,1 @@
+open square brackets table attributes columnalign left end attributes row cell a equals 25 end cell row cell a equals 7 end cell end table close

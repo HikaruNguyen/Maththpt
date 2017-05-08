@@ -1,0 +1,1 @@
+ln open parentheses a over b close parentheses equals fraction numerator ln a over denominator ln b end fraction

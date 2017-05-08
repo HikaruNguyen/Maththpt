@@ -1,0 +1,1 @@
+stack A D with rightwards arrow on top equals left parenthesis negative 2 semicolon 1 semicolon 2 right parenthesis

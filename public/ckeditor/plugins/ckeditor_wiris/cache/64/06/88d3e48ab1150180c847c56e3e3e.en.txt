@@ -1,0 +1,1 @@
+stack A subscript 1 A with rightwards arrow on top plus stack B subscript 1 B with rightwards arrow on top plus stack C subscript 1 C with rightwards arrow on top equals 0 with rightwards arrow on top
