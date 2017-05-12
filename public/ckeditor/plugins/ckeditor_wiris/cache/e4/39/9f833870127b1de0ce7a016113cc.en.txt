@@ -1,1 +1,0 @@
-fraction numerator x over denominator y y end fraction

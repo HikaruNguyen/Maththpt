@@ -1,1 +1,0 @@
-T equals log subscript square root of c end subscript open parentheses fraction numerator a cubed over denominator fourth root of b cubed end root end fraction close parentheses

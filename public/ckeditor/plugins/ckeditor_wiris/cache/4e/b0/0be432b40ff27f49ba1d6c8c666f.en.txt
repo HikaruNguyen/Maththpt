@@ -1,1 +1,0 @@
-open vertical bar z subscript 1 plus z subscript 2 close vertical bar equals 5

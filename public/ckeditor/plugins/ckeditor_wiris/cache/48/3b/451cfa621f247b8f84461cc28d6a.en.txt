@@ -1,1 +1,0 @@
-stack A B with rightwards arrow on top perpendicular stack C D with rightwards arrow on top

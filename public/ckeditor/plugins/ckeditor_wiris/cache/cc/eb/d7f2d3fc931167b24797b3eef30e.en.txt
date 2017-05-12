@@ -1,1 +1,0 @@
-increment subscript 1 colon fraction numerator x minus 2 over denominator 2 end fraction equals fraction numerator y plus 1 over denominator negative 3 end fraction equals z over 4 semicolon increment subscript 2 open curly brackets table row cell x equals 2 plus t end cell row cell y equals 3 plus 2 t end cell row cell z equals 1 minus t end cell end table close

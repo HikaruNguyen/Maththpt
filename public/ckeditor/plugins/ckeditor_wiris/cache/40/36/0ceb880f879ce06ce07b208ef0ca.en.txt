@@ -1,1 +1,0 @@
-open curly brackets table attributes columnalign left end attributes row cell u equals x squared end cell row cell d v equals fraction numerator 1 over denominator cos squared x end fraction d x end cell end table close

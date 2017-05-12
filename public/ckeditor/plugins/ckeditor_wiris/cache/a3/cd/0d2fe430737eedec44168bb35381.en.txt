@@ -1,1 +1,0 @@
-fraction numerator 4 plus z subscript n over denominator 2 end fraction

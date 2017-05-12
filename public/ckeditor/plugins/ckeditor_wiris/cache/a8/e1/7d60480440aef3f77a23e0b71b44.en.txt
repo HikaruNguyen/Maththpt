@@ -1,1 +1,0 @@
-limit as t rightwards arrow plus infinity of S left parenthesis t right parenthesis

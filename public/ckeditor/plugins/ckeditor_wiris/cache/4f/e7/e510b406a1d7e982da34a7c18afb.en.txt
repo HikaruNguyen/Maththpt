@@ -1,1 +1,0 @@
-integral subscript 0 superscript x squared end superscript cos square root of t d t

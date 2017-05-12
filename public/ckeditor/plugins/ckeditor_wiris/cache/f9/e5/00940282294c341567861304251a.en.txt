@@ -1,1 +1,0 @@
-integral 2 x d x equals x squared plus C

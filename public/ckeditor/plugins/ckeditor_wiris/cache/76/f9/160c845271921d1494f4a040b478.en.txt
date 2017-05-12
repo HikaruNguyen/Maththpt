@@ -1,1 +1,0 @@
-integral subscript 0 superscript 2 e to the power of x left parenthesis 2 x plus e to the power of x right parenthesis d x equals a. e to the power of 4 plus b. e squared plus c

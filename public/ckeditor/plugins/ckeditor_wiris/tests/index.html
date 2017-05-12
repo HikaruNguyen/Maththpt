@@ -11,7 +11,12 @@
 	<meta name="description" content="Rich HTML editor to create">
 	<meta name="author" content="WIRIS">
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+
 	<!-- Editor Plugin -->
+	<link type="text/css" rel="stylesheet" href="${param.build.test.editor.stylesheet}"/>
 	<script type="text/javascript" src="../../../.././ckeditor4/ckeditor.js"></script>
 
 	<!-- Style for html code -->
@@ -22,6 +27,9 @@
 
 	<!-- Roboto Font -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+	<!-- Extra -->
+
 
 </head>
 
@@ -74,7 +82,9 @@
 								<p>In elementary algebra, the <b>quadratic formula</b> is the solution of the quadratic equation.</p>
 								<p style="text-align: center;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>&#x000B1;</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math></p>
 								<p><b>Water is made from two molecules</b> - Hydrogen and Oxygen. If you put the two gasses together, along with energy, you can make water.</p>
-								<p style="text-align: center;"><math class="wrs_chemistry" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mo>(</mo><mi mathvariant="normal">g</mi><mo>)</mo><mo>+</mo><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mo>(</mo><mi mathvariant="normal">g</mi><mo>)</mo><mo>&#8652;</mo><mn>2</mn><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mo>(</mo><mi mathvariant="normal">l</mi><mo>)</mo></math></p>
+								<p style="text-align: center;"><math class="wrs_chemistry" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mfenced><mi mathvariant="normal">g</mi></mfenced><mo>+</mo><msub><mi mathvariant="normal">O</mi><mn>2</mn></msub><mfenced><mi mathvariant="normal">g</mi></mfenced><mo>&#x21CC;</mo><mn>2</mn><msub><mi mathvariant="normal">H</mi><mn>2</mn></msub><mi mathvariant="normal">O</mi><mfenced><mi mathvariant="normal">l</mi></mfenced></math></p>
+								<br>
+								<p>The entire formula for the surface area of a cylinder is <math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><msup><mi>&#x3C0;r</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>&#x3C0;rh</mi></math></p>
 							</div>
 						</div>
 					</div>
@@ -143,38 +153,6 @@
 					</div>
 
 					<div id="advanced_options" style="display:none">
-						<div class="wrs_row wrs_padding">
-							<div class="wrs_col wrs_s12 wrs_m4 wrs_option_label">
-								<p class="wrs_bold wrs_title_options">Mode</p>
-								<a target="_blank" href="http://www.wiris.com/plugins/docs/full-mathml-mode"><img src="img/info_icon.png" width="16" height="16" title="Modes documentation" alt="Modes documentation"></a>
-							</div>
-							<div class="wrs_col wrs_s12 wrs_m8">
-								<div class="wrs_row wrs_padding_small">
-									<div class="wrs_col wrs_xs1">
-										<input type='radio' id="full_mode_radio" name='mode_radio' value='full_mode' checked onclick="changeMode('xml');">
-									</div>
-									<div class="wrs_col wrs_xs11">
-										<label for="full_mode_radio">MathML.<span>&nbsp;Formulas are represented as MathML.</span></label>
-									</div>
-								</div>
-								<div class="wrs_row wrs_padding_small">
-									<div class="wrs_col wrs_xs1">
-										<input type='radio' id="image_mode_radio" name='mode_radio' value='image_mode' onclick="changeMode('image');">
-									</div>
-									<div class="wrs_col wrs_xs11">
-										<label for="image_mode_radio">Image.<span>&nbsp;Formulas are represented as image files. MathML is stored for edition only.</span></label>
-									</div>
-								</div>
-								<div class="wrs_row wrs_padding_small">
-									<div class="wrs_col wrs_xs1">
-										<input type='radio' id="base64_mode_radio" name='mode_radio' value='base64_mode' onclick="changeMode('base64');">
-									</div>
-									<div class="wrs_col wrs_xs11">
-										<label for="base64_mode_radio">Base64.<span>&nbsp;Formulas are represented as base64 images. MathML is stored for edition only.</span></label>
-									</div>
-								</div>
-							</div>
-						</div>
 
 						<div class="wrs_row wrs_padding" style="display: none;">
 							<div class="wrs_col wrs_s12 wrs_m4 wrs_option_label">
@@ -211,7 +189,7 @@
 							<div class="wrs_col wrs_s12 wrs_m8">
 								<div class="wrs_row wrs_padding_small wrs_no_line_height">
 									<div class="wrs_col wrs_s12 wrs_m10">
-										<textarea wrap="hard" wrap="off" name="editor_parameters" id="editor_parameters" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" cols="30" rows="5">{toolbar:'quizzes',fontsize:'20px',backgroundColor:'#3B653D',color:'#FEFEFE'}</textarea>
+										<textarea wrap="hard" wrap="off" name="editor_parameters" id="editor_parameters" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" cols="30" rows="5">{toolbar:'quizzes',fontsize:'20px',backgroundColor:'#3B653D',color:'#FEFEFE', hand: 'true'}</textarea>
 										<div id="notification_set_parameters" class="wrs_display_none"></div>
 									</div>
 									<div class="wrs_col wrs_s12 wrs_m2 wrs_center">

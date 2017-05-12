@@ -1,1 +1,0 @@
-fraction numerator 6 plus x subscript N over denominator 2 end fraction

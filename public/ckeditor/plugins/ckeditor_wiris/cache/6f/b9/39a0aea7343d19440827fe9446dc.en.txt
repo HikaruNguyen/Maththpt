@@ -1,1 +1,0 @@
-fraction numerator 1200 straight pi over denominator 13 end fraction

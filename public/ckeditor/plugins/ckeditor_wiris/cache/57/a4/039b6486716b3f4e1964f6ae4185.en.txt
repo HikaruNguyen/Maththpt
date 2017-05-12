@@ -1,1 +1,0 @@
-open square brackets table attributes columnalign left end attributes row cell x equals fraction numerator negative 3 over denominator 10 end fraction end cell row cell x equals 3 over 5 end cell end table close

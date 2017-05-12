@@ -1,1 +1,0 @@
-log subscript a squared plus b squared end subscript left parenthesis a plus b right parenthesis greater or equal than 1

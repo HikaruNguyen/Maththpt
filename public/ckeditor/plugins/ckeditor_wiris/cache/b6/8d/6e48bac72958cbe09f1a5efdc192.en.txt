@@ -1,1 +1,0 @@
-open curly brackets table attributes columnalign left end attributes row cell x subscript C Đ end subscript plus x subscript C T end subscript equals negative 2 over 3 less than 0 space left parenthesis 2 right parenthesis end cell row cell x subscript C Đ end subscript. x subscript C T end subscript equals m over 3 left parenthesis 3 right parenthesis end cell end table close

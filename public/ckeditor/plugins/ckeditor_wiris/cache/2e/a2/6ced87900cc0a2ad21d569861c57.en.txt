@@ -1,1 +1,0 @@
-fraction numerator 1 over denominator log subscript 2 n factorial end fraction plus fraction numerator 1 over denominator log subscript 3 n factorial end fraction plus midline horizontal ellipsis plus fraction numerator 1 over denominator log subscript n n factorial end fraction

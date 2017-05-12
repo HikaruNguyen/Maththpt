@@ -1,1 +1,0 @@
-fraction numerator x squared over denominator x plus 1 end fraction

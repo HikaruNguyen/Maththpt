@@ -1,1 +1,0 @@
-S left parenthesis t right parenthesis equals integral subscript 0 superscript 1 open parentheses fraction numerator 1 over denominator left parenthesis x plus 1 right parenthesis left parenthesis x plus 2 right parenthesis squared end fraction close parentheses d x

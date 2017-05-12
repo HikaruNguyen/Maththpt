@@ -1,1 +1,0 @@
-open parentheses 0 semicolon fraction numerator 2 straight pi over denominator 3 end fraction close parentheses

@@ -1,1 +1,0 @@
-integral subscript 1 superscript 2 open parentheses 1 over x minus fraction numerator 1 over denominator x plus 1 end fraction close parentheses d x

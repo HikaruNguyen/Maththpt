@@ -1,1 +1,0 @@
-integral subscript 1 superscript 2 x squared ln x d x

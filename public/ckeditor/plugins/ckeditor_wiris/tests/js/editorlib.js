@@ -89,6 +89,8 @@ createEditorInstance('en', {});
 	CKEDITOR.instances.example.destroy();
 	// New CKEditor instance.
 	createEditorInstance(lang, wiriseditorparameters);
+	// Reset modal window.
+	_wrs_modalWindow = undefined;
 }
 
 

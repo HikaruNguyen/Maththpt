@@ -1,1 +1,0 @@
-open curly brackets table row cell x equals negative 2 plus 2 t end cell row cell y equals negative 3 t end cell row cell z equals 1 plus t end cell end table close

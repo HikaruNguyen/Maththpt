@@ -1,1 +1,0 @@
-log subscript a over b end subscript superscript 2 a squared right parenthesis plus 3 log subscript b left parenthesis a over b right parenthesis

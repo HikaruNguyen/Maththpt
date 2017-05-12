@@ -1,1 +1,0 @@
-integral subscript 0 superscript 100 open parentheses fraction numerator 1 over denominator left parenthesis x plus 1 right parenthesis left parenthesis x plus 2 right parenthesis squared end fraction close parentheses d x almost equal to 0 comma 193

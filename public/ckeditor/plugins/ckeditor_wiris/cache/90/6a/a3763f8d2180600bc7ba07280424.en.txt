@@ -1,1 +1,0 @@
-integral subscript negative 3 end subscript superscript 0 f left parenthesis x right parenthesis d x space plus space integral subscript 4 superscript 0 f left parenthesis x right parenthesis d x

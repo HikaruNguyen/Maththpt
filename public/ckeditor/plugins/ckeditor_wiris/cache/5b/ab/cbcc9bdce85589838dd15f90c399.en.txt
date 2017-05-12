@@ -1,1 +1,0 @@
-stack m i n with left square bracket 2 semicolon 4 right square bracket below y equals 6

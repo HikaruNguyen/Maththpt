@@ -1,1 +1,0 @@
-fraction numerator 1 over denominator open vertical bar z subscript 1 close vertical bar end fraction plus fraction numerator 1 over denominator open vertical bar z subscript 2 close vertical bar end fraction

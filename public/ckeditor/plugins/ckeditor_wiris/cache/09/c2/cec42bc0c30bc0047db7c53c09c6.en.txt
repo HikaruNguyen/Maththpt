@@ -1,1 +1,0 @@
-stack A B with rightwards arrow on top equals 4 stack A M with rightwards arrow on top

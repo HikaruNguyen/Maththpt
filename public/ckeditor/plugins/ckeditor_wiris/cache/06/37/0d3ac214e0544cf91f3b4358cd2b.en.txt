@@ -1,1 +1,0 @@
-integral left parenthesis x squared plus 1 right parenthesis squared d x equals fraction numerator x squared plus 1 over denominator 3 end fraction plus C

@@ -1,1 +1,0 @@
-integral tan squared x d x space equals space tan x minus x plus C

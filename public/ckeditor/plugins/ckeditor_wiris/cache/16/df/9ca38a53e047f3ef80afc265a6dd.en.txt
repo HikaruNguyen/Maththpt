@@ -1,1 +1,0 @@
-a to the power of c space equals space b to the power of d space left right double arrow ln open parentheses a over b close parentheses equals d over c

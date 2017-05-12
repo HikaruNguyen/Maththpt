@@ -1,1 +1,0 @@
-f left parenthesis x right parenthesis equals x cubed minus 3 x

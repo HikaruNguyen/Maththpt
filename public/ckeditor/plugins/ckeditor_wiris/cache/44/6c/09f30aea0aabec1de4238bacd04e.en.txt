@@ -1,1 +1,0 @@
-V subscript M I J K end subscript over V subscript M N P Q end subscript

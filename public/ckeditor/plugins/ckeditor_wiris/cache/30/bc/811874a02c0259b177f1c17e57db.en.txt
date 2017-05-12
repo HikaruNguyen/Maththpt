@@ -1,1 +1,0 @@
-open curly brackets table row cell x equals 1 plus t end cell row cell y equals negative 3 minus t end cell row cell z equals negative 4 minus 8 t end cell end table close left parenthesis t element of straight real numbers right parenthesis

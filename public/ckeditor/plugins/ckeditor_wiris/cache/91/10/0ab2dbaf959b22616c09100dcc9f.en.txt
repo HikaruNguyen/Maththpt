@@ -1,1 +1,0 @@
-fraction numerator m x squared minus 2 x plus m minus 1 over denominator 2 x plus 1 end fraction

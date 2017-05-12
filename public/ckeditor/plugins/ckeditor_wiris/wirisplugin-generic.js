@@ -42,19 +42,22 @@ var _wrs_int_temporalIframe;
 var _wrs_int_window;
 var _wrs_int_window_opened = false;
 var _wrs_int_temporalImageResizing;
-var _wrs_int_language;
+var _wrs_int_langCode;
 var _wrs_int_directionality = '';
 // Custom Editors.
-var _wrs_int_customEditors = {chemistry : {name: 'Chemistry', toolbar : 'chemistry', icon : 'chem.png', enabled : false, confVariable : '_wrs_conf_chemEnabled'}}
+var _wrs_int_customEditors = {chemistry : {name: 'Chemistry', toolbar : 'chemistry', icon : 'chem.png', enabled : false, confVariable : '_wrs_conf_chemEnabled', title: 'WIRIS EDITOR chemistry'}}
 
-if (navigator.userLanguage) {
-    _wrs_int_language = navigator.userLanguage;
-}
-else if (navigator.language) {
-    _wrs_int_language = navigator.language.substring(0, 2);
-}
-else {
-    _wrs_int_language = 'en';
+
+if (typeof _wrs_int_langCode == 'undefined') {
+    if (navigator.userLanguage) {
+        _wrs_int_langCode = navigator.userLanguage;
+    }
+    else if (navigator.language) {
+        _wrs_int_langCode = navigator.language.substring(0, 2);
+    }
+    else {
+        _wrs_int_langCode = 'en';
+    }
 }
 
 // Including core.js.
@@ -107,7 +110,7 @@ function wrs_int_init_handler(target,toolbar) {
             formulaButton.style.cursor = 'pointer';
 
             wrs_addEvent(formulaButton, 'click', function () {
-                wrs_int_openNewFormulaEditor(target, _wrs_int_language);
+                wrs_int_openNewFormulaEditor(target, _wrs_int_langCode);
             });
 
             toolbar.appendChild(formulaButton);
@@ -120,7 +123,7 @@ function wrs_int_init_handler(target,toolbar) {
             CASButton.style.cursor = 'pointer';
 
             wrs_addEvent(CASButton, 'click', function () {
-                wrs_int_openNewCAS(target, _wrs_int_language);
+                wrs_int_openNewCAS(target, _wrs_int_langCode);
             });
 
             toolbar.appendChild(CASButton);
@@ -137,7 +140,7 @@ function wrs_int_init_handler(target,toolbar) {
 
                     wrs_addEvent(customEditorButton, 'click', function () {
                         wrs_int_enableCustomEditor(key);
-                        wrs_int_openNewFormulaEditor(target, _wrs_int_language);
+                        wrs_int_openNewFormulaEditor(target, _wrs_int_langCode);
                     });
 
                     toolbar.appendChild(customEditorButton);
@@ -153,7 +156,7 @@ function wrs_int_init_handler(target,toolbar) {
  * @param object iframe Target
  */
 function wrs_int_openNewFormulaEditor(iframe, language) {
-    if (_wrs_int_window_opened) {
+    if (_wrs_int_window_opened && !_wrs_conf_modalWindow) {
         _wrs_int_window.focus();
     }
     else {
@@ -191,9 +194,9 @@ function wrs_int_doubleClickHandler(iframe, element) {
             wrs_int_enableCustomEditor(customEditor);
         }
         if (wrs_containsClass(element, 'Wirisformula')) {
-            if (!_wrs_int_window_opened) {
+            if (!_wrs_int_window_opened || _wrs_conf_modalWindow) {
                 _wrs_temporalImage = element;
-                wrs_int_openExistingFormulaEditor(iframe, _wrs_int_language);
+                wrs_int_openExistingFormulaEditor(iframe, _wrs_int_langCode);
             }
             else {
                 _wrs_int_window.focus();
@@ -202,7 +205,7 @@ function wrs_int_doubleClickHandler(iframe, element) {
         else if (wrs_containsClass(element, 'Wiriscas')) {
             if (!_wrs_int_window_opened) {
                 _wrs_temporalImage = element;
-                wrs_int_openExistingCAS(iframe, _wrs_int_language);
+                wrs_int_openExistingCAS(iframe, _wrs_int_langCode);
             }
             else {
                 _wrs_int_window.focus();

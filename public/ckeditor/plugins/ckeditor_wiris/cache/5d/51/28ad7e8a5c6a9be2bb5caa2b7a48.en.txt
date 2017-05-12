@@ -1,1 +1,0 @@
-ln a to the power of alpha equals alpha ln a

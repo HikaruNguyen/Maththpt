@@ -1,1 +1,0 @@
-2 ln left parenthesis 1 minus x right parenthesis minus fraction numerator 1 over denominator 1 minus x end fraction

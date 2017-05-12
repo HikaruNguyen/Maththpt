@@ -1,1 +1,0 @@
-open curly brackets table attributes columnalign left end attributes row cell d u equals 2 x d x end cell row cell v equals tan x end cell end table close

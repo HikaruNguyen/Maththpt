@@ -1,1 +1,0 @@
-fraction numerator 3 V over denominator S end fraction

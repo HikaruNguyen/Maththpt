@@ -1,1 +1,0 @@
-large max for left square bracket negative 2 semicolon 2 right square bracket of f left parenthesis x right parenthesis equals f left parenthesis 1 right parenthesis

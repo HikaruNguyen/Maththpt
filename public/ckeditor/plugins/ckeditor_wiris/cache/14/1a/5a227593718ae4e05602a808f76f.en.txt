@@ -1,1 +1,0 @@
-open parentheses negative infinity semicolon minus 2 close parentheses union left parenthesis 4 semicolon plus infinity right parenthesis

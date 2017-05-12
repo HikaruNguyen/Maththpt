@@ -55,10 +55,11 @@ class com_wiris_plugin_impl_ConfigurationImpl implements com_wiris_plugin_api_Co
 		if($this->getProperty("wiriseditorparsexml", null) === "true") {
 			$arrayParse = $this->appendElement2JavascriptArray($arrayParse, "xml");
 		}
-		$this->appendVarJs($sb, "_wrs_conf_parseModes", $arrayParse, "This value can content 'latex' and 'xml)");
+		$this->appendVarJs($sb, "_wrs_conf_parseModes", $arrayParse, "This value can contain 'latex' and 'xml)");
 		$this->appendVarJs($sb, "_wrs_conf_editorAttributes", "'" . $this->getProperty("wiriseditorwindowattributes", null) . "'", "Specifies formula editor window options");
 		$this->appendVarJs($sb, "_wrs_conf_editorUrl", "'" . $this->plugin->getImageServiceURL("editor", false) . "'", "WIRIS editor");
 		$this->appendVarJs($sb, "_wrs_conf_modalWindow", $this->getProperty("wiriseditormodalwindow", null), "Editor modal window");
+		$this->appendVarJs($sb, "_wrs_conf_modalWindowFullScreen", $this->getProperty("wiriseditormodalwindowfullscreen", null), "Editor modal window with fullscreen mode by default");
 		$this->appendVarJs($sb, "_wrs_conf_CASEnabled", $this->getProperty("wiriscasenabled", null), "Specifies if WIRIS cas is enabled");
 		$this->appendVarJs($sb, "_wrs_conf_CASMathmlAttribute", "'" . $this->getProperty("wiriscasmathmlattribute", null) . "'", "Specifies the image tag where we should save the WIRIS cas mathml code");
 		$this->appendVarJs($sb, "_wrs_conf_CASAttributes", "'" . $this->getProperty("wiriscaswindowattributes", null) . "'", "Specifies WIRIS cas window options");
@@ -103,8 +104,8 @@ class com_wiris_plugin_impl_ConfigurationImpl implements com_wiris_plugin_api_Co
 		$version = null;
 		try {
 			$version = com_wiris_system_Storage::newResourceStorage("VERSION")->read();
-		}catch(Exception $ï¿½e) {
-			$_ex_ = ($ï¿½e instanceof HException) ? $ï¿½e->e : $ï¿½e;
+		}catch(Exception $»e) {
+			$_ex_ = ($»e instanceof HException) ? $»e->e : $»e;
 			$ex = $_ex_;
 			{
 				$version = "Missing version";
@@ -177,16 +178,16 @@ class com_wiris_plugin_impl_ConfigurationImpl implements com_wiris_plugin_api_Co
 	public function __call($m, $a) {
 		if(isset($this->$m) && is_callable($this->$m))
 			return call_user_func_array($this->$m, $a);
-		else if(isset($this->ï¿½dynamics[$m]) && is_callable($this->ï¿½dynamics[$m]))
-			return call_user_func_array($this->ï¿½dynamics[$m], $a);
+		else if(isset($this->»dynamics[$m]) && is_callable($this->»dynamics[$m]))
+			return call_user_func_array($this->»dynamics[$m], $a);
 		else if('toString' == $m)
 			return $this->__toString();
 		else
-			throw new HException('Unable to call ï¿½'.$m.'ï¿½');
+			throw new HException('Unable to call «'.$m.'»');
 	}
 	function __toString() { return 'com.wiris.plugin.impl.ConfigurationImpl'; }
 }
-function com_wiris_plugin_impl_ConfigurationImpl_0(&$ï¿½this, &$array, &$arrayClose, &$arrayOpen, &$value) {
+function com_wiris_plugin_impl_ConfigurationImpl_0(&$»this, &$array, &$arrayClose, &$arrayOpen, &$value) {
 	if(strlen($array) === 2) {
 		return "]";
 	} else {

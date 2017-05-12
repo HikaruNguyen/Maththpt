@@ -1,1 +1,0 @@
-open curly brackets table attributes columnalign left end attributes row cell m greater than 0 end cell row cell increment apostrophe equals m squared minus m left parenthesis 3 minus 2 m right parenthesis greater or equal than 0 end cell end table close

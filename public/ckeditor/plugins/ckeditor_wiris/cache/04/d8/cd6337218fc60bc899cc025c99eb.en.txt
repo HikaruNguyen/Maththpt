@@ -1,1 +1,0 @@
-1 third.1 half d open parentheses S comma open parentheses A B C close parentheses close parentheses.1 fourth S subscript triangle A B C end subscript

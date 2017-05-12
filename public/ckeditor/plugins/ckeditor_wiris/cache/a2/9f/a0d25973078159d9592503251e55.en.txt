@@ -1,1 +1,0 @@
-integral subscript negative 2 end subscript superscript 2 fraction numerator x to the power of 2016 over denominator e to the power of x plus 1 end fraction d x

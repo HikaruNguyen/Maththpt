@@ -1,1 +1,0 @@
-log subscript a squared end subscript left parenthesis a b right parenthesis equals 2 plus 2 log subscript a b

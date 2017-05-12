@@ -1,1 +1,0 @@
-large max for left parenthesis 0 semicolon 1 right square bracket of f left parenthesis x right parenthesis equals f open parentheses fraction numerator square root of 3 over denominator 2 end fraction close parentheses equals fraction numerator 3 square root of 3 over denominator 4 end fraction

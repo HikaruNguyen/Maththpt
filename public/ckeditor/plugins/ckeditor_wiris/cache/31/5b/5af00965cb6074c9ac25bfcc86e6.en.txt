@@ -1,1 +1,0 @@
-y equals fraction numerator 1 over denominator square root of 2 minus x end root end fraction minus ln left parenthesis x squared minus 1 right parenthesis

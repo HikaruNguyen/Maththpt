@@ -1,1 +1,0 @@
-open curly brackets table row cell x equals 2 minus t apostrophe end cell row cell y equals 3 end cell row cell z equals t apostrophe end cell end table close

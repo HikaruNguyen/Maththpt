@@ -112,6 +112,10 @@ function updateHTMLCode(){
 	// We set WIRIS editor parameters on editor_parameters textarea.
 	var e = document.getElementById("editor_parameters");
 
+	if (typeof _wrs_modalWindow != undefined) {
+		_wrs_modalWindow = undefined;
+	}
+
 	// Auxiliary method to check a valid JSON. For demo purposes only.
 	if (checkValidJson()) {
 		var jsonParams = eval('[' + e.value + '][0]');
@@ -410,6 +414,8 @@ createEditorInstance('en', {});
 	CKEDITOR.instances.example.destroy();
 	// New CKEditor instance.
 	createEditorInstance(lang, wiriseditorparameters);
+	// Reset modal window.
+	_wrs_modalWindow = undefined;
 }
 
 

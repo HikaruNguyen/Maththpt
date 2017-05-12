@@ -1,1 +1,0 @@
-ln left parenthesis a b squared right parenthesis equals ln a plus left parenthesis ln b right parenthesis squared

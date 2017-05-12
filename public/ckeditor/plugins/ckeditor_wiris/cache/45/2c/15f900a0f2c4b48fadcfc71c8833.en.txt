@@ -1,1 +1,0 @@
-integral f left parenthesis u right parenthesis d u equals F left parenthesis u right parenthesis plus C

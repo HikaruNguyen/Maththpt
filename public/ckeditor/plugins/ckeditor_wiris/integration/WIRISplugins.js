@@ -759,6 +759,7 @@ com.wiris.js.JsOSData.prototype = {
 }
 com.wiris.js.JsBrowser = $hxClasses["com.wiris.js.JsBrowser"] = function() {
 	this.dataBrowser = new Array();
+	this.addBrowser("navigator.userAgent",null,"Edge",null,"Edge");
 	this.addBrowser("navigator.userAgent",null,"Chrome",null,"Chrome");
 	this.addBrowser("navigator.userAgent",null,"OmniWeb",null,"OmniWeb");
 	this.addBrowser("navigator.vendor",null,"Apple","Version","Safari");
@@ -769,6 +770,7 @@ com.wiris.js.JsBrowser = $hxClasses["com.wiris.js.JsBrowser"] = function() {
 	this.addBrowser("navigator.vendor",null,"Camino",null,"Camino");
 	this.addBrowser("navigator.userAgent",null,"Netscape",null,"Netscape");
 	this.addBrowser("navigator.userAgent",null,"MSIE","MSIE","Explorer");
+	this.addBrowser("navigator.userAgent",null,"Trident","rv","Explorer");
 	this.addBrowser("navigator.userAgent",null,"Gecko","rv","Mozilla");
 	this.addBrowser("navigator.userAgent",null,"Mozilla","Mozilla","Netscape");
 	this.dataOS = new Array();
@@ -780,11 +782,18 @@ com.wiris.js.JsBrowser = $hxClasses["com.wiris.js.JsBrowser"] = function() {
 	this.addOS("navigator.platform","Linux","Linux");
 	this.setBrowser();
 	this.setOS();
+	this.setTouchable();
 };
 com.wiris.js.JsBrowser.__name__ = ["com","wiris","js","JsBrowser"];
 com.wiris.js.JsBrowser.prototype = {
-	isAndroid: function() {
+	isTouchable: function() {
+		return this.touchable;
+	}
+	,isAndroid: function() {
 		return this.os == "Android";
+	}
+	,isMac: function() {
+		return this.os == "Mac";
 	}
 	,isIOS: function() {
 		return this.os == "iOS";
@@ -792,8 +801,14 @@ com.wiris.js.JsBrowser.prototype = {
 	,isFF: function() {
 		return this.browser == "Firefox";
 	}
+	,isSafari: function() {
+		return this.browser == "Safari";
+	}
 	,isChrome: function() {
 		return this.browser == "Chrome";
+	}
+	,isEdge: function() {
+		return this.browser == "Edge";
 	}
 	,isIE: function() {
 		return this.browser == "Explorer";
@@ -812,6 +827,13 @@ com.wiris.js.JsBrowser.prototype = {
 		var index = str.indexOf(search);
 		if(index == -1) return null;
 		return "" + Std.parseFloat(HxOverrides.substr(str,index + search.length + 1,null));
+	}
+	,setTouchable: function() {
+		if(this.isIOS() || this.isAndroid()) {
+			this.touchable = true;
+			return;
+		}
+		this.touchable = false;
 	}
 	,setOS: function() {
 		var i = HxOverrides.iter(this.dataOS);
@@ -858,6 +880,7 @@ com.wiris.js.JsBrowser.prototype = {
 		b.identity = identity;
 		this.dataBrowser.push(b);
 	}
+	,touchable: null
 	,os: null
 	,ver: null
 	,browser: null
@@ -986,8 +1009,8 @@ com.wiris.js.JsPluginViewer.prototype = {
 		data += "&metrics=true&centerbaseline=false&mml=" + StringTools.urlEncode(mml);
 		data += "&lang=" + this.lang;
 		if(this.zoom != 1) data += "&zoom=" + this.zoom;
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Calling: " + url,{ fileName : "JsPluginViewer.hx", lineNumber : 535, className : "com.wiris.js.JsPluginViewer", methodName : "callService"});
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("POST:" + data,{ fileName : "JsPluginViewer.hx", lineNumber : 537, className : "com.wiris.js.JsPluginViewer", methodName : "callService"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Calling: " + url,{ fileName : "JsPluginViewer.hx", lineNumber : 538, className : "com.wiris.js.JsPluginViewer", methodName : "callService"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("POST:" + data,{ fileName : "JsPluginViewer.hx", lineNumber : 540, className : "com.wiris.js.JsPluginViewer", methodName : "callService"});
 		con.open("POST",url,false);
 		con.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=utf-8");
 		con.send(data);
@@ -1013,7 +1036,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 		}
 		var md5 = haxe.Md5.encode("centerbaseline=false\nmml=" + mmlEntities + "\n");
 		url = (this.absoluteURL.length > 0?this.absoluteURL:this.baseURL + this.localpath) + "/showimage" + this.extension;
-		data = "?formula=" + md5 + "&lang=" + this.lang;
+		if(new com.wiris.js.JsBrowser().isIE()) data = "?formula=" + md5 + "&lang=" + this.lang + "&useragent=IE"; else data = "?formula=" + md5 + "&lang=" + this.lang;
 		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Calling: " + url,{ fileName : "JsPluginViewer.hx", lineNumber : 474, className : "com.wiris.js.JsPluginViewer", methodName : "callShowimage"});
 		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("GET:" + data,{ fileName : "JsPluginViewer.hx", lineNumber : 476, className : "com.wiris.js.JsPluginViewer", methodName : "callShowimage"});
 		con.open("GET",url + data,false);
@@ -1023,15 +1046,15 @@ com.wiris.js.JsPluginViewer.prototype = {
 		if(haxe.Json.parse(con.responseText).status == "warning") {
 			con.open("POST",url,false);
 			con.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=utf-8");
-			data = "centerbaseline=false&mml=" + StringTools.urlEncode(mml);
+			if(new com.wiris.js.JsBrowser().isIE()) data = "centerbaseline=false&mml=" + StringTools.urlEncode(mml) + "&useragent=IE"; else data = "centerbaseline=false&mml=" + StringTools.urlEncode(mml);
 			con.send(data);
 			s = con.responseText;
 		}
 		var result = haxe.Json.parse(con.responseText).result;
-		img.src = result.format == "svg"?"data:image/svg+xml;base64,":"data:image/png;base64,";
-		img.src = img.src + Std.string(result.base64);
+		img.src = result.format == "svg"?"data:image/svg+xml;charset=utf8,":"data:image/png;base64,";
+		img.src = img.src + StringTools.urlEncode(result.content);
 		if(result.height > 0) {
-			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(this.calculateAlignment(height,baseline),{ fileName : "JsPluginViewer.hx", lineNumber : 498, className : "com.wiris.js.JsPluginViewer", methodName : "callShowimage"});
+			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(this.calculateAlignment(height,baseline),{ fileName : "JsPluginViewer.hx", lineNumber : 501, className : "com.wiris.js.JsPluginViewer", methodName : "callShowimage"});
 			img.style.verticalAlign = "-" + this.calculateAlignment(result.height,result.baseline) + "px";
 			img.style.height = "" + Std.string(result.height) + "px";
 			img.style.width = "" + Std.string(result.width) + "px";
@@ -1057,8 +1080,8 @@ com.wiris.js.JsPluginViewer.prototype = {
 		data = "metrics=true&centerbaseline=false&mml=" + StringTools.urlEncode(mml);
 		data += "&lang=" + this.lang;
 		if(this.zoom != 1) data += "&zoom=" + this.zoom;
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Calling: " + url,{ fileName : "JsPluginViewer.hx", lineNumber : 400, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("POST:" + data,{ fileName : "JsPluginViewer.hx", lineNumber : 402, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Calling: " + url,{ fileName : "JsPluginViewer.hx", lineNumber : 392, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("POST:" + data,{ fileName : "JsPluginViewer.hx", lineNumber : 394, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
 		con.open("POST",url,false);
 		con.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=utf-8");
 		con.send(data);
@@ -1067,7 +1090,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 		if(i >= 0) {
 			var scaleDpi = 1;
 			var h = this.queryToParams(HxOverrides.substr(s,i + 1,null));
-			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(h.get("formula"),{ fileName : "JsPluginViewer.hx", lineNumber : 425, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
+			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(h.get("formula"),{ fileName : "JsPluginViewer.hx", lineNumber : 417, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
 			if(h.exists("dpi")) scaleDpi = this.zoom * (Std.parseInt(h.get("dpi")) / 96);
 			baseline = Std.parseInt(h.get("cb")) / scaleDpi | 0;
 			height = Std.parseInt(h.get("ch")) / scaleDpi | 0;
@@ -1076,7 +1099,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 		}
 		img.src = con.responseText;
 		if(height > 0) {
-			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(this.calculateAlignment(height,baseline),{ fileName : "JsPluginViewer.hx", lineNumber : 436, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
+			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(this.calculateAlignment(height,baseline),{ fileName : "JsPluginViewer.hx", lineNumber : 428, className : "com.wiris.js.JsPluginViewer", methodName : "callCreateImage"});
 			img.style.verticalAlign = "-" + this.calculateAlignment(height,baseline) + "px";
 			img.style.height = "" + height + "px";
 			img.style.width = "" + width + "px";
@@ -1090,9 +1113,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 	,calculateAlignment: function(height,baseline) {
 		var result;
 		result = 0;
-		var ALIGN_CONSTANT = 0.5;
-		if(this._wrs_conf_imageFormat == null) this._wrs_conf_imageFormat = haxe.Json.parse(this.callGetVariableKeys("wirisimageformat")).result.wirisimageformat;
-		if(this._wrs_conf_imageFormat == "svg") result = height - baseline - ALIGN_CONSTANT; else result = height - baseline;
+		result = height - baseline;
 		return result;
 	}
 	,getTechnology: function() {
@@ -1106,12 +1127,12 @@ com.wiris.js.JsPluginViewer.prototype = {
 		} else return com.wiris.js.JsPluginViewer.TECH;
 	}
 	,processMathML: function(mml,container) {
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(mml,{ fileName : "JsPluginViewer.hx", lineNumber : 336, className : "com.wiris.js.JsPluginViewer", methodName : "processMathML"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(mml,{ fileName : "JsPluginViewer.hx", lineNumber : 337, className : "com.wiris.js.JsPluginViewer", methodName : "processMathML"});
 		var img = js.Lib.document.createElement("img");
 		if(this.performanceenabled == null) this.performanceenabled = this.isPerformanceEnabled();
 		if(this.mode == com.wiris.js.JsPluginViewer.USE_CREATE_IMAGE && this.performanceenabled) this.callShowimage(mml,img); else if(this.mode == com.wiris.js.JsPluginViewer.USE_CREATE_IMAGE && !this.performanceenabled) this.callCreateImage(mml,img); else img.src = this.baseURL + this.localpath + "/showimage" + this.extension + "?mml=" + StringTools.urlEncode(mml);
 		container.appendChild(img);
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(img.src,{ fileName : "JsPluginViewer.hx", lineNumber : 350, className : "com.wiris.js.JsPluginViewer", methodName : "processMathML"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(img.src,{ fileName : "JsPluginViewer.hx", lineNumber : 351, className : "com.wiris.js.JsPluginViewer", methodName : "processMathML"});
 	}
 	,getMathML_IE7: function(mathNode0) {
 		var mathml = "";
@@ -1153,7 +1174,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 		var mathml = null;
 		var browser = new com.wiris.js.JsBrowser();
 		if(browser.getBrowser() == "Explorer" && (browser.getVersion() == "6" || browser.getVersion() == "7") && navigator.appVersion.indexOf("Trident") == -1) {
-			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Is ie7",{ fileName : "JsPluginViewer.hx", lineNumber : 235, className : "com.wiris.js.JsPluginViewer", methodName : "replaceNodes"});
+			if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Is ie7",{ fileName : "JsPluginViewer.hx", lineNumber : 236, className : "com.wiris.js.JsPluginViewer", methodName : "replaceNodes"});
 			mathml = this.getMathML_IE7(mathNode);
 		}
 		var container = js.Lib.document.createElement("span");
@@ -1193,7 +1214,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 		this.parseElement(js.Lib.document);
 	}
 	,doLoad: function() {
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("doLoad",{ fileName : "JsPluginViewer.hx", lineNumber : 104, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("doLoad",{ fileName : "JsPluginViewer.hx", lineNumber : 105, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
 		this.scriptName = "WIRISplugins.js";
 		var col;
 		col = js.Lib.document.getElementsByTagName("script");
@@ -1212,7 +1233,7 @@ com.wiris.js.JsPluginViewer.prototype = {
 					var query = HxOverrides.substr(src,k + 1,null);
 					this.params = this.queryToParams(query);
 				}
-				if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(this.baseURL,{ fileName : "JsPluginViewer.hx", lineNumber : 123, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
+				if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace(this.baseURL,{ fileName : "JsPluginViewer.hx", lineNumber : 124, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
 			}
 		}
 		this.tech = this.getTechnology();
@@ -1241,14 +1262,14 @@ com.wiris.js.JsPluginViewer.prototype = {
 			this.absoluteURL = "/wirispluginengine/integration";
 		}
 		this.ready = true;
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Tech:" + this.tech,{ fileName : "JsPluginViewer.hx", lineNumber : 154, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Tech:" + this.tech,{ fileName : "JsPluginViewer.hx", lineNumber : 155, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
 		if(this.params.exists("viewer")) this.viewer = this.params.get("viewer");
 		if(this.params.exists("zoom")) this.zoom = Std.parseFloat(this.params.get("zoom"));
 		if(this.params.exists("dpi")) this.zoom *= Std.parseFloat(this.params.get("dpi")) / 96;
 		if(this.params.exists("lang")) this.lang = this.params.get("lang"); else this.lang = "en";
 		if(this.lang == "inherit") this.lang = js.Lib.document.getElementsByTagName("html")[0].lang;
 		if(this.viewer == "image") this.parseDocument();
-		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Language:" + this.lang,{ fileName : "JsPluginViewer.hx", lineNumber : 185, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
+		if(com.wiris.js.JsPluginViewer.DEBUG) haxe.Log.trace("Language:" + this.lang,{ fileName : "JsPluginViewer.hx", lineNumber : 186, className : "com.wiris.js.JsPluginViewer", methodName : "doLoad"});
 		com.wiris.js.JsPluginViewer.instance = this;
 		com.wiris.js.JsPluginViewer.bypassEncapsulation();
 	}

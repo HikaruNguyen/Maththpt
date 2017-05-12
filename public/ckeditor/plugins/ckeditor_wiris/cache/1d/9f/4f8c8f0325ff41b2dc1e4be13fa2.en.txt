@@ -1,1 +1,0 @@
-limit as x rightwards arrow plus infinity of integral subscript n superscript n plus 1 end superscript fraction numerator 1 over denominator 1 plus e to the power of x end fraction d x

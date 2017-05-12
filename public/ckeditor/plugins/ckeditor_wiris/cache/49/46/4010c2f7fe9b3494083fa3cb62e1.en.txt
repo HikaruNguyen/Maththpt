@@ -1,1 +1,0 @@
-stack D C with rightwards arrow on top

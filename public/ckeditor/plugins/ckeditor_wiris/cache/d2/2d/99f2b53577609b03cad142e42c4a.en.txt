@@ -1,1 +1,0 @@
-M left parenthesis x subscript 0 semicolon y subscript 0 semicolon z subscript 0 right parenthesis element of left parenthesis S right parenthesis

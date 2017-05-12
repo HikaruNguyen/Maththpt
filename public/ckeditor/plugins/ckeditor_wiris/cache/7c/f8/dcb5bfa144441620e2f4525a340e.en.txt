@@ -1,1 +1,0 @@
-d subscript 2 colon open curly brackets table row cell x equals 1 end cell row cell y equals t subscript 2 end cell row cell z equals 0 end cell end table close

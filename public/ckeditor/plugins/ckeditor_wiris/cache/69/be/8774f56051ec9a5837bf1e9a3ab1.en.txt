@@ -1,1 +1,0 @@
-fraction numerator 1 over denominator x apostrophe end fraction

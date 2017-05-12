@@ -1,1 +1,0 @@
-integral subscript 1 superscript 2 fraction numerator d x over denominator x plus x squared end fraction

@@ -1,1 +1,0 @@
-integral fraction numerator x squared over denominator 1 minus x squared end fraction d x space equals 1 half ln open vertical bar fraction numerator x plus 1 over denominator x minus 1 end fraction close vertical bar space minus space x plus C

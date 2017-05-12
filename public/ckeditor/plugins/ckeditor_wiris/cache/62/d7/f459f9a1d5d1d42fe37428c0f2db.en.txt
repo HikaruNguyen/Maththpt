@@ -1,1 +1,0 @@
-integral 1 over x 0 d x equals ln open vertical bar x close vertical bar plus C

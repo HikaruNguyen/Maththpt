@@ -1,1 +1,0 @@
-log subscript 1 half end subscript open parentheses log subscript 3 fraction numerator 2 x plus 1 over denominator x minus 1 end fraction close parentheses greater or equal than 0
