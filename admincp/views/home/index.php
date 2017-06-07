@@ -75,7 +75,7 @@ if (isset($_SESSION['token'])) {
                     <div class="number">
                         <h3 class="font-green-sharp">
                             <span data-counter="counterup" data-value="7800"> <?php echo $countUser ?></span>
-                            <small class="font-green-sharp">thành viên</small>
+                            <small class="font-green-sharp">member</small>
                         </h3>
                         <small>Số lượng thành viên</small>
                     </div>
@@ -312,6 +312,9 @@ if (isset($_SESSION['token'])) {
                                         fontFamily: "Roboto"
                                     },
                                     theme: "theme1",
+                                    axisX:{
+                                        labelFontSize: 10
+                                    },
                                     data: [
                                         {
                                             type: "column",
